@@ -21,6 +21,7 @@
       ]
     ))
     python3
+    black
     basedpyright
   ];
 
@@ -40,7 +41,7 @@
 
   # https://devenv.sh/basics/
   enterShell = ''
-    hello         # Run scripts directly
+    black ./src/
   '';
 
   # https://devenv.sh/tasks/

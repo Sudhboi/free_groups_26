@@ -5,7 +5,17 @@ devenv.local.yaml
 
 # direnv
 .direnv
+
+# environment
 .envrc
+.env
 
 # pre-commit
 .pre-commit-config.yaml
+
+# builds
+dist
+
+# testing
+tests
+
