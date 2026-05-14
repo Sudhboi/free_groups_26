@@ -18,6 +18,7 @@
         numpy
         build
         twine
+        pytest
       ]
     ))
     python3

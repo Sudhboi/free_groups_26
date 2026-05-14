@@ -17,5 +17,4 @@ devenv.local.yaml
 dist
 
 # testing
-tests
-
+*__pycache__
