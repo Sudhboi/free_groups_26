@@ -39,6 +39,10 @@
     echo hello from $GREET
   '';
 
+  scripts.publish.exec = ''
+    python3 -m build && twine upload dist/*
+  '';
+
   # https://devenv.sh/basics/
   enterShell = ''
     black ./src/
