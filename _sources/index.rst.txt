@@ -3,13 +3,29 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-free_groups_26 documentation
+free_groups_26 Documentation
 ============================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Installation
+------------
 
+Install using pip (or your preferred virtual environment manager):
+
+.. code-block::
+
+    pip install free-groups-26
+
+Usage
+-----
+
+Import at the top of your file as such:
+
+.. code-block:: python
+
+   import free_groups_26 as fg
+
+Other Documentation
+-------------------
 
 .. toctree::
    :maxdepth: 2
