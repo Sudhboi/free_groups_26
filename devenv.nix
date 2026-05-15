@@ -17,6 +17,8 @@
         graph-tool
         numpy
         build
+        sortedcontainers
+        sphinx
         twine
         pytest
       ]
@@ -36,18 +38,16 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo hello from $GREET
-  '';
-
   scripts.publish.exec = ''
     python3 -m build && twine upload dist/*
   '';
 
-  # https://devenv.sh/basics/
-  enterShell = ''
-    black ./src/
+  scripts.tests.exec = ''
+    python3 -m pytest
   '';
+
+  # https://devenv.sh/basics/
+  enterShell = "";
 
   # https://devenv.sh/tasks/
   # tasks = {
