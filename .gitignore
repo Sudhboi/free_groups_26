@@ -19,3 +19,6 @@ dist
 # testing
 *__pycache__
 .pytest_cache
+
+# documentation
+docs/build
