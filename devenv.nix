@@ -19,7 +19,9 @@
         build
         sortedcontainers
         sphinx
+        sphinx-autobuild
         twine
+        furo
         pytest
       ]
     ))
@@ -44,6 +46,22 @@
 
   scripts.tests.exec = ''
     python3 -m pytest
+  '';
+
+  scripts.build_website.exec = ''
+    cd $DEVENV_ROOT/docs
+    make html 
+    cd -
+  '';
+
+  scripts.site.exec = ''
+    xdg-open $DEVENV_ROOT/docs/build/html/index.html
+  '';
+
+  scripts.live.exec = ''
+    cd $DEVENV_ROOT/docs
+    make livehtml 
+    cd -
   '';
 
   # https://devenv.sh/basics/
