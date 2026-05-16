@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="">
+<html class="no-js" lang="en" data-content_root="../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Classes" href="classes.html" />
 
-    <!-- Generated with Sphinx 7.0.0 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>free_groups_26.letter - free_groups_26 v0.0.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=369552022d0b975c8e74270ce6eabe0fb7978f24" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -195,15 +195,87 @@
         </div>
         <article role="main">
           <section id="free-groups-26-letter">
-<h1>free_groups_26.letter<a class="headerlink" href="#free-groups-26-letter" title="Permalink to this heading">#</a></h1>
+<h1>free_groups_26.letter<a class="headerlink" href="#free-groups-26-letter" title="Link to this heading">¶</a></h1>
 <section id="type-aliases">
-<h2>Type Aliases<a class="headerlink" href="#type-aliases" title="Permalink to this heading">#</a></h2>
+<h2>Type Aliases<a class="headerlink" href="#type-aliases" title="Link to this heading">¶</a></h2>
 </section>
 <section id="letter">
-<h2>Letter<a class="headerlink" href="#letter" title="Permalink to this heading">#</a></h2>
+<h2>Letter<a class="headerlink" href="#letter" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="free_groups_26.Letter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Letter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Letter" title="Link to this definition">¶</a></dt>
+<dd><p>This class represents a letter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Public access of both instance variables (<a class="reference internal" href="#free_groups_26.Letter.sym" title="free_groups_26.Letter.sym"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sym</span></code></a> and <a class="reference internal" href="#free_groups_26.Letter.exp" title="free_groups_26.Letter.exp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exp</span></code></a>) is encouraged.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>symbol</strong> (<code class="xref py py-type docutils literal notranslate"><span class="pre">Symbol</span></code>) – The symbol of the letter. All strings are valid symbols.</p></li>
+<li><p><strong>exponent</strong> (<code class="xref py py-type docutils literal notranslate"><span class="pre">Exponent</span></code>) – The exponent of the letter.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">x³</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Letter.__eq__">
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.__eq__" title="Link to this definition">¶</a></dt>
+<dd><p>Checks for equality between two letters. Two letters are equal <span class="math notranslate nohighlight">\(\iff\)</span> the symbol and the exponent are equal.
+Returns <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is not a <a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-type docutils literal notranslate"><span class="pre">Letter</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<code class="xref py py-type docutils literal notranslate"><span class="pre">object</span></code>) – The letter to compare against.</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="free_groups_26.Letter.exp">
+<span class="sig-name descname"><span class="pre">exp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Exponent</span></em><a class="headerlink" href="#free_groups_26.Letter.exp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="free_groups_26.Letter.sym">
+<span class="sig-name descname"><span class="pre">sym</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Symbol</span></em><a class="headerlink" href="#free_groups_26.Letter.sym" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.letter_from_str">
+<span class="sig-name descname"><span class="pre">letter_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.letter_from_str" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a letter from a string of the format <code class="docutils literal notranslate"><span class="pre">{sym}^{exp}</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><a class="reference internal" href="#free_groups_26.lfs" title="free_groups_26.lfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">lfs()</span></code></a> is a concise alias for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">letter_from_str</span><span class="p">(</span><span class="s2">&quot;b^32&quot;</span><span class="p">)</span>
+<span class="go">b³²</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.lfs">
+<span class="sig-name descname"><span class="pre">lfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.lfs" title="Link to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://www.linuxfromscratch.org/">Alias</a> for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -256,8 +328,20 @@
             <ul>
 <li><a class="reference internal" href="#">free_groups_26.letter</a><ul>
 <li><a class="reference internal" href="#type-aliases">Type Aliases</a></li>
-<li><a class="reference internal" href="#letter">Letter</a></li>
-<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#letter">Letter</a><ul>
+<li><a class="reference internal" href="#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
+<li><a class="reference internal" href="#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#free_groups_26.letter_from_str"><code class="docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.lfs"><code class="docutils literal notranslate"><span class="pre">lfs()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -269,9 +353,10 @@
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
+</div><script src="../_static/documentation_options.js?v=1812e922"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>
