@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+path = str(Path('../..', 'src').resolve())
+print(path)
+sys.path.insert(0, path)
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -29,3 +35,5 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_static_path = ['_static']
+add_module_names = False
+autoclass_content = 'both'

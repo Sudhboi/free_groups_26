@@ -11,7 +11,7 @@ Installation
 
 Install using pip (or your preferred virtual environment manager):
 
-.. code-block::
+.. code-block:: text
 
     pip install free-groups-26
 
@@ -24,10 +24,12 @@ Import at the top of your file as such:
 
    import free_groups_26 as fg
 
-Other Documentation
--------------------
+
+Documentation
+-------------
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   classes/classes

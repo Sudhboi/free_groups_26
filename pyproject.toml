@@ -29,5 +29,6 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Sudhboi/free_groups_26"
+Documentation = "https://www.sudhirkrisna.com/free_groups_26/"
+Repository = "https://github.com/Sudhboi/free_groups_26"
 Issues = "https://github.com/Sudhboi/free_groups_26/issues"

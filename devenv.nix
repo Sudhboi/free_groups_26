@@ -54,6 +54,12 @@
     cd -
   '';
 
+  scripts.doctests.exec = ''
+    cd $DEVENV_ROOT/docs
+    make doctest
+    cd -
+  '';
+
   scripts.site.exec = ''
     xdg-open $DEVENV_ROOT/docs/build/html/index.html
   '';
