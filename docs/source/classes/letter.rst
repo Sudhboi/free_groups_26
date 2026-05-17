@@ -18,7 +18,7 @@ Letter
 
 .. autoclass:: Letter
    :members:
-   :special-members: __eq__
+   :special-members: __eq__, __lt__
 
 Functions
 ---------

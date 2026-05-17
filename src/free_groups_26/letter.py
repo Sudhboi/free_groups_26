@@ -58,6 +58,25 @@ class Letter:
         else:
             return self.sym + "".join([format_map[i] for i in str(self.exp)])
 
+    def __lt__(self, other : object) -> bool:
+        """
+        Checks if ``self < other``. The following ordering is followed:
+
+        .. math::
+            
+            a < a^2 < \\ldots < a^{-2} < a^{-1} < b < \\ldots
+
+        :param object other: The object to compare against.
+
+        Returns ``NotImplemented`` if ``other`` is not a :py:type:`Letter`.
+
+        """
+        if not isinstance(other, Letter):
+            return NotImplemented
+        else:
+            return (self.sym < other.sym) and (self.exp < other.exp)
+
+
     @override
     def __hash__(self) -> int:
         return hash((self.sym, self.exp))

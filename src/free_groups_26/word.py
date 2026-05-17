@@ -3,6 +3,7 @@ from collections.abc import Iterable
 from typing import override
 from .letter import Letter, Exponent, Symbol, letter_from_str
 from .free_group import FreeGroup
+from sortedcontainers import SortedSet
 
 
 class MutableWord:
@@ -130,8 +131,8 @@ def _reduce_cyclic(stack: list[Letter]) -> None:
 
 
 def _infer_free_group(word: Word) -> FreeGroup:
-    basis: list[Symbol] = []
+    basis: set[Symbol] = SortedSet()
     for letter in word.word:
         if letter.sym not in basis:
-            basis.append(letter.sym)
-    return FreeGroup(tuple(basis))
+            basis.add(letter.sym)
+    return FreeGroup(basis)
