@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="prev" title="Classes" href="classes.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="free_groups_26.free_group" href="free_group.html"><link rel="prev" title="Classes" href="classes.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>free_groups_26.letter - free_groups_26 v0.0.2 documentation</title>
@@ -194,6 +194,7 @@
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="classes.html">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.letter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
 </ul>
 </li>
 </ul>
@@ -291,6 +292,22 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Letter.__lt__">
+<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.__lt__" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">&lt;</span> <span class="pre">other</span></code>. The following ordering is followed:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[a &lt; a^2 &lt; \ldots &lt; a^{-2} &lt; a^{-1} &lt; b &lt; \ldots\]</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>object</em>) – The object to compare against.</p>
+</dd>
+</dl>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is not a <a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-type docutils literal notranslate"><span class="pre">Letter</span></code></a>.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="free_groups_26.Letter.exp">
 <span class="sig-name descname"><span class="pre">exp</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Exponent</span></span><a class="headerlink" href="#free_groups_26.Letter.exp" title="Link to this definition">¶</a></dt>
@@ -334,7 +351,15 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="free_group.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">free_groups_26.free_group</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="classes.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -385,6 +410,7 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 <li><a class="reference internal" href="#letter">Letter</a><ul>
 <li><a class="reference internal" href="#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
 <li><a class="reference internal" href="#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.__lt__"><code class="docutils literal notranslate"><span class="pre">Letter.__lt__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
 </ul>
