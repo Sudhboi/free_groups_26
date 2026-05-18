@@ -35,6 +35,8 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
+html_logo = '_static/logo.svg'
+html_favicon = '_static/logo.svg'
 html_static_path = ['_static']
 add_module_names = False
 autoclass_content = 'both'
