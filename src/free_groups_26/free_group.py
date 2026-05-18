@@ -45,4 +45,3 @@ def get_free_group(rank: int) -> FreeGroup:
     for i in range(97, 97 + rank):
         basisSet.add(chr(i))
     return FreeGroup(basisSet)
-

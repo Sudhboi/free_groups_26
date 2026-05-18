@@ -14,7 +14,7 @@ Word
 
 .. autoclass:: Word
    :members:
-   :special-members: __eq__, __mul_, __pow__, __repr__
+   :special-members: __eq__, __mul__, __pow__, __repr__
 
 Other Functions
 ---------------

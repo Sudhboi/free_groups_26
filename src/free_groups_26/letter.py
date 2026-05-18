@@ -99,7 +99,7 @@ def letter_from_str(raw: str) -> Letter:
 
         :py:func:`lfs` is a concise alias for :py:func:`letter_from_str`.
 
-    >>> fg.letter_from_str("b^32")
+    >>> letter_from_str("b^32")
     b³²
 
     """
