@@ -195,6 +195,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="classes.html">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.letter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html">free_groups_26.word</a></li>
 </ul>
 </li>
 </ul>
@@ -268,12 +269,22 @@
 </ul>
 </dd>
 </dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">a</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="go">x³</span>
 </pre></div>
 </div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="free_groups_26.Letter.sym">
+<span class="sig-name descname"><span class="pre">sym</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Symbol</span></span><a class="headerlink" href="#free_groups_26.Letter.sym" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="free_groups_26.Letter.exp">
+<span class="sig-name descname"><span class="pre">exp</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Exponent</span></span><a class="headerlink" href="#free_groups_26.Letter.exp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="free_groups_26.Letter.__eq__">
 <span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.__eq__" title="Link to this definition">¶</a></dt>
@@ -284,9 +295,9 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 <dd class="field-odd"><p><strong>other</strong> (<code class="xref py py-type docutils literal notranslate"><span class="pre">object</span></code>) – The letter to compare against.</p>
 </dd>
 </dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">fg</span><span class="o">.</span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">Letter</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="go">False</span>
 </pre></div>
 </div>
@@ -308,15 +319,15 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 <p>Returns <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is not a <a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-type docutils literal notranslate"><span class="pre">Letter</span></code></a>.</p>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="free_groups_26.Letter.exp">
-<span class="sig-name descname"><span class="pre">exp</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Exponent</span></span><a class="headerlink" href="#free_groups_26.Letter.exp" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="free_groups_26.Letter.sym">
-<span class="sig-name descname"><span class="pre">sym</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Symbol</span></span><a class="headerlink" href="#free_groups_26.Letter.sym" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Letter.get_copyable">
+<span class="sig-name descname"><span class="pre">get_copyable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#free_groups_26.Letter.get_copyable" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A string that can be read by <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -409,10 +420,11 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 </li>
 <li><a class="reference internal" href="#letter">Letter</a><ul>
 <li><a class="reference internal" href="#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
+<li><a class="reference internal" href="#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Letter.__lt__"><code class="docutils literal notranslate"><span class="pre">Letter.__lt__()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.get_copyable"><code class="docutils literal notranslate"><span class="pre">Letter.get_copyable()</span></code></a></li>
 </ul>
 </li>
 </ul>

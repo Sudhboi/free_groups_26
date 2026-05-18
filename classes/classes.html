@@ -195,6 +195,7 @@
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="letter.html">free_groups_26.letter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html">free_groups_26.word</a></li>
 </ul>
 </li>
 </ul>
@@ -247,10 +248,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="letter.html#letter">Letter</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.__lt__"><code class="docutils literal notranslate"><span class="pre">Letter.__lt__()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="letter.html#free_groups_26.Letter.get_copyable"><code class="docutils literal notranslate"><span class="pre">Letter.get_copyable()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -265,15 +267,42 @@
 <li class="toctree-l1"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="free_group.html#freegroup">FreeGroup</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup"><code class="docutils literal notranslate"><span class="pre">FreeGroup</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.alphabet"><code class="docutils literal notranslate"><span class="pre">FreeGroup.alphabet</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.basis"><code class="docutils literal notranslate"><span class="pre">FreeGroup.basis</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.rank"><code class="docutils literal notranslate"><span class="pre">FreeGroup.rank</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.alphabet"><code class="docutils literal notranslate"><span class="pre">FreeGroup.alphabet</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="free_group.html#functions">Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="free_group.html#free_groups_26.get_free_group"><code class="docutils literal notranslate"><span class="pre">get_free_group()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="word.html">free_groups_26.word</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html#word">Word</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word"><code class="docutils literal notranslate"><span class="pre">Word</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.word"><code class="docutils literal notranslate"><span class="pre">Word.word</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.length"><code class="docutils literal notranslate"><span class="pre">Word.length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.reduced"><code class="docutils literal notranslate"><span class="pre">Word.reduced()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.concat"><code class="docutils literal notranslate"><span class="pre">Word.concat()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.inv"><code class="docutils literal notranslate"><span class="pre">Word.inv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.__pow__"><code class="docutils literal notranslate"><span class="pre">Word.__pow__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.__repr__"><code class="docutils literal notranslate"><span class="pre">Word.__repr__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.__eq__"><code class="docutils literal notranslate"><span class="pre">Word.__eq__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.strict_equality"><code class="docutils literal notranslate"><span class="pre">Word.strict_equality()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.infer_free_group"><code class="docutils literal notranslate"><span class="pre">Word.infer_free_group()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="word.html#free_groups_26.Word.get_copyable"><code class="docutils literal notranslate"><span class="pre">Word.get_copyable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="word.html#other-functions">Other Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
 </ul>
 </li>
 </ul>
