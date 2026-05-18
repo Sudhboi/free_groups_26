@@ -22,7 +22,11 @@
         sphinx-autobuild
         twine
         furo
+
+        # Testing
         pytest
+        jupyter
+
       ]
     ))
     python3

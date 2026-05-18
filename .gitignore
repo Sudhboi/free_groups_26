@@ -19,6 +19,7 @@ dist
 # testing
 *__pycache__
 .pytest_cache
+jupyter_test
 
 # documentation
 docs/build

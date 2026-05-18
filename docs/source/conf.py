@@ -37,3 +37,4 @@ html_theme = 'furo'
 html_static_path = ['_static']
 add_module_names = False
 autoclass_content = 'both'
+autodoc_member_order = 'bysource'

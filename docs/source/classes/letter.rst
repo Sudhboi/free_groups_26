@@ -5,7 +5,7 @@ free_groups_26.letter
 
 .. testsetup::
 
-   import free_groups_26 as fg
+   from free_groups_26 import *
 
 Type Aliases
 ------------

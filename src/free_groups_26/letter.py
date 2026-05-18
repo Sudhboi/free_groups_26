@@ -7,13 +7,14 @@ for i in range(4, 10):
 type Symbol = str
 type Exponent = int
 
+
 class Letter:
     sym: Symbol
     exp: Exponent
 
     def __init__(self, symbol: Symbol, exponent: Exponent) -> None:
         """
-        This class represents a letter. 
+        This class represents a letter.
 
         .. note::
 
@@ -24,13 +25,13 @@ class Letter:
         :param exponent: The exponent of the letter.
         :type exponent: :py:type:`Exponent`
 
-        >>> fg.Letter("a", 1)
+        >>> Letter("a", 1)
         a
-        >>> fg.Letter("x", 3)
+        >>> Letter("x", 3)
         x³
         """
-        self.sym = symbol #:
-        self.exp = exponent #:
+        self.sym = symbol  #:
+        self.exp = exponent  #:
 
     @override
     def __eq__(self, other: object) -> bool:
@@ -41,9 +42,9 @@ class Letter:
         :param other: The letter to compare against.
         :type other: :py:type:`object`
 
-        >>> fg.Letter("a", 4) == fg.Letter("a", 4)
+        >>> Letter("a", 4) == Letter("a", 4)
         True
-        >>> fg.Letter("a", 2) == fg.Letter("b", 3)
+        >>> Letter("a", 2) == Letter("b", 3)
         False
 
         """
@@ -58,12 +59,12 @@ class Letter:
         else:
             return self.sym + "".join([format_map[i] for i in str(self.exp)])
 
-    def __lt__(self, other : object) -> bool:
+    def __lt__(self, other: object) -> bool:
         """
         Checks if ``self < other``. The following ordering is followed:
 
         .. math::
-            
+
             a < a^2 < \\ldots < a^{-2} < a^{-1} < b < \\ldots
 
         :param object other: The object to compare against.
@@ -76,12 +77,14 @@ class Letter:
         else:
             return (self.sym < other.sym) and (self.exp < other.exp)
 
-
     @override
     def __hash__(self) -> int:
         return hash((self.sym, self.exp))
 
     def get_copyable(self) -> str:
+        """
+        :return: A string that can be read by :py:func:`letter_from_str`.
+        """
         return "{}^{}".format(self.sym, self.exp)
 
     def isInverse(self) -> bool:
@@ -104,6 +107,7 @@ def letter_from_str(raw: str) -> Letter:
     if len(splits) == 1:
         return Letter(splits[0], 1)
     return Letter(splits[0], int(splits[1]))
+
 
 lfs = letter_from_str
 """

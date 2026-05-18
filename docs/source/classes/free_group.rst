@@ -5,7 +5,7 @@ free_groups_26.free_group
 
 .. testsetup::
 
-   import free_groups_26 as fg
+   from free_groups_26 import *
 
 FreeGroup
 ---------
