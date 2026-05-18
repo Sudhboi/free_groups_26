@@ -7,7 +7,7 @@
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Letter Functions - free_groups_26 v0.0.3 documentation</title>
+        <title>Letter Functions - free_groups_26 v0.0.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -162,7 +162,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">free_groups_26 v0.0.3 documentation</div></a>
+      <a href="../index.html"><div class="brand">free_groups_26 v0.0.4 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -186,7 +186,7 @@
     <img class="sidebar-logo" src="../_static/logo.svg" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">free_groups_26 v0.0.3 documentation</span>
+  <span class="sidebar-brand-text">free_groups_26 v0.0.4 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -276,7 +276,33 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.lfs">
 <span class="sig-name descname"><span class="pre">lfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.lfs" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference external" href="https://www.linuxfromscratch.org/">Alias</a> for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://www.linuxfromscratch.org/">https://www.linuxfromscratch.org/</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.letter_from_str_alphabet">
+<span class="sig-name descname"><span class="pre">letter_from_str_alphabet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.letter_from_str_alphabet" title="Link to this definition">¶</a></dt>
+<dd><p>Another way to generate a letter from a string. This function works exclusively on the English Alphabet, where it considers uppercase letters the inverse of lowercase letters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function does not work properly with non-alphabetic symbols as it involves bitwise operations.</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="go">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letter_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="go">a⁻¹</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.lfsa">
+<span class="sig-name descname"><span class="pre">lfsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.lfsa" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.letter_from_str_alphabet" title="free_groups_26.letter_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str_alphabet()</span></code></a>.</p>
 </dd></dl>
 
 </section>
@@ -339,6 +365,8 @@
 <li><a class="reference internal" href="#">Letter Functions</a><ul>
 <li><a class="reference internal" href="#free_groups_26.letter_from_str"><code class="docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.lfs"><code class="docutils literal notranslate"><span class="pre">lfs()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.letter_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">letter_from_str_alphabet()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.lfsa"><code class="docutils literal notranslate"><span class="pre">lfsa()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -350,7 +378,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=bc6a6d3b"></script>
+</div><script src="../_static/documentation_options.js?v=77e3fdf6"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

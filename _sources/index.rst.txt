@@ -6,6 +6,10 @@
 free_groups_26 Documentation
 ============================
 
+.. note::
+
+   The website is updated based on commits from Github, and is usually more up to date than the Python package. In case a function mentioned on the website cannot be found in the package, it will be added in the next release.
+
 Installation
 ------------
 
