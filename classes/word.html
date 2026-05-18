@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="prev" title="free_groups_26.free_group" href="free_group.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="free_groups_26.morphism" href="morphism.html"><link rel="prev" title="free_groups_26.free_group" href="free_group.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>free_groups_26.word - free_groups_26 v0.0.2 documentation</title>
@@ -196,6 +196,7 @@
 <li class="toctree-l2"><a class="reference internal" href="letter.html">free_groups_26.letter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.word</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphism.html">free_groups_26.morphism</a></li>
 </ul>
 </li>
 </ul>
@@ -250,6 +251,11 @@
 <dt class="sig sig-object py" id="free_groups_26.Word">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Word" title="Link to this definition">¶</a></dt>
 <dd><p>This class represents a word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>word</strong> – Any <code class="xref py py-type docutils literal notranslate"><span class="pre">Iterable</span></code> containing <a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Letter</span></code></a> s is accepted.</p>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="free_groups_26.Word.word">
 <span class="sig-name descname"><span class="pre">word</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#free_groups_26.Word.word" title="Link to this definition">¶</a></dt>
@@ -276,6 +282,20 @@
 <dt class="sig sig-object py" id="free_groups_26.Word.concat">
 <span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Word.concat" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the result of concatenating the given word with <code class="docutils literal notranslate"><span class="pre">self</span></code>. The result is <strong>not</strong> reduced.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Word.__mul__">
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Word.__mul__" title="Link to this definition">¶</a></dt>
+<dd><p>Words can be multiplied with both letters and words (aliased to concatenation). Unlike <a class="reference internal" href="#free_groups_26.Word.concat" title="free_groups_26.Word.concat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">concat()</span></code></a>, the result is reduced.
+Right multiplication is also implemented.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a^2&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="go">a²b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a^2&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="go">a³</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="#free_groups_26.wfs" title="free_groups_26.wfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfs()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -370,12 +390,12 @@ Use of <a class="reference internal" href="#free_groups_26.wfs" title="free_grou
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.word_from_str_alphabet">
 <span class="sig-name descname"><span class="pre">word_from_str_alphabet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str_alphabet" title="Link to this definition">¶</a></dt>
-<dd><p>Another way to generate a <code class="xref py py-type docutils literal notranslate"><span class="pre">word</span></code> from a string, when your letters are exclusively from the English alphabet. 
+<dd><p>Another way to generate a <code class="xref py py-type docutils literal notranslate"><span class="pre">word</span></code> from a string, when your letters are exclusively from the English alphabet.
 Uppercase letters are considered the inverses of lowercase letters. See below for examples.
 Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_groups_26.wfsa"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfsa()</span></code></a> is recommended.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This function does not work properly with non-alphabetic symbols.</p>
+<p>This function does not work properly with non-alphabetic symbols as it involves bitwise operations.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -407,7 +427,15 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="morphism.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">free_groups_26.morphism</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="free_group.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -457,6 +485,7 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
 <li><a class="reference internal" href="#free_groups_26.Word.length"><code class="docutils literal notranslate"><span class="pre">Word.length</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.reduced"><code class="docutils literal notranslate"><span class="pre">Word.reduced()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.concat"><code class="docutils literal notranslate"><span class="pre">Word.concat()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Word.__mul__"><code class="docutils literal notranslate"><span class="pre">Word.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.inv"><code class="docutils literal notranslate"><span class="pre">Word.inv()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.__pow__"><code class="docutils literal notranslate"><span class="pre">Word.__pow__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.__repr__"><code class="docutils literal notranslate"><span class="pre">Word.__repr__()</span></code></a></li>

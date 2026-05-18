@@ -6,3 +6,4 @@ Classes
    letter
    free_group
    word
+   morphism
