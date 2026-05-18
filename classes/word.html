@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="free_groups_26.morphism" href="morphism.html"><link rel="prev" title="free_groups_26.free_group" href="free_group.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Morphism" href="morphism.html"><link rel="prev" title="FreeGroup" href="free_group.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>free_groups_26.word - free_groups_26 v0.0.3 documentation</title>
+        <title>Word - free_groups_26 v0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -197,17 +197,25 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="classes.html">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="letter.html">free_groups_26.letter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.word</a></li>
-<li class="toctree-l2"><a class="reference internal" href="morphism.html">free_groups_26.morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="letter.html">Letter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="free_group.html">FreeGroup</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Word</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphism.html">Morphism</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/letter.html">Letter Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/free_group.html">Free Group Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.letter.html">free_groups_26.letter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.free_group.html">free_groups_26.free_group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
 </ul>
 </li>
 </ul>
@@ -248,16 +256,9 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="free-groups-26-word">
-<h1>free_groups_26.word<a class="headerlink" href="#free-groups-26-word" title="Link to this heading">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.wfs">
-<span class="sig-name descname"><span class="pre">wfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfs" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>.</p>
-</dd></dl>
-
-<section id="word">
-<h2>Word<a class="headerlink" href="#word" title="Link to this heading">¶</a></h2>
+          <section id="word">
+<h1>Word<a class="headerlink" href="#word" title="Link to this heading">¶</a></h1>
+<p>This class is defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.word</span></code>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="free_groups_26.Word">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Word" title="Link to this definition">¶</a></dt>
@@ -306,7 +307,7 @@ Right multiplication is also implemented.</p>
 <span class="go">a³</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="#free_groups_26.wfs" title="free_groups_26.wfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfs()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../functionality/word.html#free_groups_26.wfs" title="free_groups_26.wfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfs()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -376,61 +377,13 @@ Right multiplication is also implemented.</p>
 <span class="sig-name descname"><span class="pre">get_copyable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#free_groups_26.Word.get_copyable" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A string that can be read by <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>.</p>
+<dd class="field-odd"><p>A string that can be read by <a class="reference internal" href="../functionality/word.html#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 </dd></dl>
 
-</section>
-<section id="other-functions">
-<h2>Other Functions<a class="headerlink" href="#other-functions" title="Link to this heading">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.word_from_str">
-<span class="sig-name descname"><span class="pre">word_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str" title="Link to this definition">¶</a></dt>
-<dd><p>Generates a word from a string of the format <code class="docutils literal notranslate"><span class="pre">&quot;{sym}^{exp}</span> <span class="pre">{letter}</span> <span class="pre">...</span></code>. This is consistent with <a class="reference internal" href="letter.html#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.
-Use of <a class="reference internal" href="#free_groups_26.wfs" title="free_groups_26.wfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfs()</span></code></a> is recommended.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>raw</strong> (<em>str</em>) – The string to be parsed.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.word_from_str_alphabet">
-<span class="sig-name descname"><span class="pre">word_from_str_alphabet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str_alphabet" title="Link to this definition">¶</a></dt>
-<dd><p>Another way to generate a <a class="reference internal" href="../generated/free_groups_26.word.html#module-free_groups_26.word" title="free_groups_26.word"><code class="xref py py-type docutils literal notranslate"><span class="pre">word</span></code></a> from a string, when your letters are exclusively from the English alphabet.
-Uppercase letters are considered the inverses of lowercase letters. See below for examples.
-Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_groups_26.wfsa"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfsa()</span></code></a> is recommended.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This function does not work properly with non-alphabetic symbols as it involves bitwise operations.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>raw</strong> (<em>str</em>) – The string to be parsed.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The returned word is reduced by default.</p>
-</dd>
-</dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;aaaAbBCCccccc&quot;</span><span class="p">)</span>
-<span class="go">a²c³</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;AAAABBBBHHHHMMMkk&quot;</span><span class="p">)</span>
-<span class="go">a⁻⁴b⁻⁴h⁻⁴m⁻³k²</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.wfsa">
-<span class="sig-name descname"><span class="pre">wfsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfsa" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str_alphabet" title="free_groups_26.word_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a>.</p>
-</dd></dl>
-
-</section>
 </section>
 
         </article>
@@ -443,7 +396,7 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">free_groups_26.morphism</div>
+                <div class="title">Morphism</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -454,7 +407,7 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">free_groups_26.free_group</div>
+                <div class="title">FreeGroup</div>
                 
               </div>
             </a>
@@ -488,9 +441,7 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">free_groups_26.word</a><ul>
-<li><a class="reference internal" href="#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
-<li><a class="reference internal" href="#word">Word</a><ul>
+<li><a class="reference internal" href="#">Word</a><ul>
 <li><a class="reference internal" href="#free_groups_26.Word"><code class="docutils literal notranslate"><span class="pre">Word</span></code></a><ul>
 <li><a class="reference internal" href="#free_groups_26.Word.word"><code class="docutils literal notranslate"><span class="pre">Word.word</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.length"><code class="docutils literal notranslate"><span class="pre">Word.length</span></code></a></li>
@@ -504,14 +455,6 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
 <li><a class="reference internal" href="#free_groups_26.Word.strict_equality"><code class="docutils literal notranslate"><span class="pre">Word.strict_equality()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.infer_free_group"><code class="docutils literal notranslate"><span class="pre">Word.infer_free_group()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.get_copyable"><code class="docutils literal notranslate"><span class="pre">Word.get_copyable()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#other-functions">Other Functions</a><ul>
-<li><a class="reference internal" href="#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
 </ul>
 </li>
 </ul>

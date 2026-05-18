@@ -1,5 +1,5 @@
-free_groups_26.free_group
-=========================
+FreeGroup
+=========
 
 .. py:currentmodule:: free_groups_26
 
@@ -7,14 +7,8 @@ free_groups_26.free_group
 
    from free_groups_26 import *
 
-FreeGroup
----------
+This class is defined in ``free_groups_26.free_group``.
 
 .. autoclass:: FreeGroup
    :members:
    :special-members: __eq__
-
-Functions
----------
-
-.. autofunction:: get_free_group

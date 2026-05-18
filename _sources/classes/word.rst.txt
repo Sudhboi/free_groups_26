@@ -1,5 +1,5 @@
-free_groups_26.word
-=====================
+Word
+====
 
 .. py:currentmodule:: free_groups_26
 
@@ -7,21 +7,8 @@ free_groups_26.word
 
    from free_groups_26 import *
 
-.. autofunction:: wfs
-
-Word
-----
+This class is defined in ``free_groups_26.word``.
 
 .. autoclass:: Word
    :members:
    :special-members: __eq__, __mul__, __pow__, __repr__
-
-Other Functions
----------------
-
-.. autofunction:: word_from_str
-
-.. autofunction:: word_from_str_alphabet
-
-.. autofunction:: wfsa
-

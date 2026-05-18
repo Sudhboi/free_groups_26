@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="API" href="../api.html"><link rel="prev" title="free_groups_26.word" href="word.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Functions" href="../functionality/functions.html"><link rel="prev" title="Word" href="word.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>free_groups_26.morphism - free_groups_26 v0.0.3 documentation</title>
+        <title>Morphism - free_groups_26 v0.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -197,17 +197,25 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="classes.html">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="letter.html">free_groups_26.letter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="free_group.html">free_groups_26.free_group</a></li>
-<li class="toctree-l2"><a class="reference internal" href="word.html">free_groups_26.word</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="letter.html">Letter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="free_group.html">FreeGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html">Word</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Morphism</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/letter.html">Letter Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/free_group.html">Free Group Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.letter.html">free_groups_26.letter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.free_group.html">free_groups_26.free_group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
 </ul>
 </li>
 </ul>
@@ -248,10 +256,9 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="free-groups-26-morphism">
-<h1>free_groups_26.morphism<a class="headerlink" href="#free-groups-26-morphism" title="Link to this heading">¶</a></h1>
-<section id="morphism">
-<h2>Morphism<a class="headerlink" href="#morphism" title="Link to this heading">¶</a></h2>
+          <section id="morphism">
+<h1>Morphism<a class="headerlink" href="#morphism" title="Link to this heading">¶</a></h1>
+<p>This class is defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.morphism</span></code>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="free_groups_26.Morphism">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Morphism</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SortedDict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Morphism" title="Link to this definition">¶</a></dt>
@@ -284,19 +291,18 @@
 </dd></dl>
 
 </section>
-</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../api.html">
+          <a class="next-page" href="../functionality/functions.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">API</div>
+                <div class="title">Functions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -307,7 +313,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">free_groups_26.word</div>
+                <div class="title">Word</div>
                 
               </div>
             </a>
@@ -341,13 +347,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">free_groups_26.morphism</a><ul>
-<li><a class="reference internal" href="#morphism">Morphism</a><ul>
+<li><a class="reference internal" href="#">Morphism</a><ul>
 <li><a class="reference internal" href="#free_groups_26.Morphism"><code class="docutils literal notranslate"><span class="pre">Morphism</span></code></a><ul>
 <li><a class="reference internal" href="#free_groups_26.Morphism.morphism_map"><code class="docutils literal notranslate"><span class="pre">Morphism.morphism_map</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Morphism.map"><code class="docutils literal notranslate"><span class="pre">Morphism.map()</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

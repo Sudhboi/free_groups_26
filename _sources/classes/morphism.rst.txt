@@ -1,5 +1,5 @@
-free_groups_26.morphism
-=======================
+Morphism
+========
 
 .. py:currentmodule:: free_groups_26
 
@@ -7,8 +7,7 @@ free_groups_26.morphism
 
    from free_groups_26 import *
 
-Morphism
---------
+This class is defined in ``free_groups_26.morphism``.
 
 .. autoclass:: Morphism
    :members:
