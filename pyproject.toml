@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "free_groups_26"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = [
     "sortedcontainers >= 2.4.0"
 ]
