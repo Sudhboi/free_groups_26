@@ -33,3 +33,4 @@ Documentation
    :caption: Contents:
 
    classes/classes
+   api

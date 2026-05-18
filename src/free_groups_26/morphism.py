@@ -22,7 +22,7 @@ class Morphism:
 
     def map(self, word: Word) -> Word:
         """
-        Performs the morphism on a given word. If a symbol in the word has a map in :py:attr:`morphism_map`, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.
+        Applies the morphism to a given word. If a symbol in the word has a map in :py:attr:`morphism_map`, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.
 
         >>> d = SortedDict({'a' : wfs("a b^-1")})
         >>> phi = Morphism(d)

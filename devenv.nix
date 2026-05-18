@@ -45,7 +45,7 @@
 
   # https://devenv.sh/scripts/
   scripts.publish.exec = ''
-    python3 -m build && twine upload dist/*
+    python3 -m build && twine upload dist/* --verbose
   '';
 
   scripts.tests.exec = ''
