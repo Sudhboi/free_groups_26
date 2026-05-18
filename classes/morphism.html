@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="prev" title="free_groups_26.word" href="word.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="API" href="../api.html"><link rel="prev" title="free_groups_26.word" href="word.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>free_groups_26.morphism - free_groups_26 v0.0.3 documentation</title>
@@ -199,6 +199,13 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">free_groups_26.morphism</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.letter.html">free_groups_26.letter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.free_group.html">free_groups_26.free_group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -260,7 +267,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="free_groups_26.Morphism.map">
 <span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Morphism.map" title="Link to this definition">¶</a></dt>
-<dd><p>Performs the morphism on a given word. If a symbol in the word has a map in <a class="reference internal" href="#free_groups_26.Morphism.morphism_map" title="free_groups_26.Morphism.morphism_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">morphism_map</span></code></a>, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.</p>
+<dd><p>Applies the morphism to a given word. If a symbol in the word has a map in <a class="reference internal" href="#free_groups_26.Morphism.morphism_map" title="free_groups_26.Morphism.morphism_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">morphism_map</span></code></a>, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">SortedDict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a b^-1&quot;</span><span class="p">)})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">phi</span> <span class="o">=</span> <span class="n">Morphism</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a^2 b^3&quot;</span><span class="p">)</span>
@@ -280,7 +287,15 @@
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="../api.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="word.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
