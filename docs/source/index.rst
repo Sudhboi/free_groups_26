@@ -24,6 +24,12 @@ Import at the top of your file as such:
 
    import free_groups_26 as fg
 
+Other Information
+-----------------
+
+Repository: https://github.com/Sudhboi/free_groups_26
+
+PyPI Page: https://pypi.org/project/free-groups-26/ 
 
 Documentation
 -------------
@@ -33,4 +39,5 @@ Documentation
    :caption: Contents:
 
    classes/classes
+   functionality/functions
    api

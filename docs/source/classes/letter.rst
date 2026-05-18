@@ -1,5 +1,5 @@
-free_groups_26.letter
-=====================
+Letter
+======
 
 .. py:currentmodule:: free_groups_26
 
@@ -7,22 +7,12 @@ free_groups_26.letter
 
    from free_groups_26 import *
 
-Type Aliases
-------------
-
 .. autotype:: Symbol
 .. autotype:: Exponent
 
-Letter
-------
+This class is defined in ``free_groups_26.free_group``.
 
 .. autoclass:: Letter
    :members:
    :special-members: __eq__, __lt__
 
-Functions
----------
-
-.. autofunction:: letter_from_str
-
-.. autofunction:: lfs

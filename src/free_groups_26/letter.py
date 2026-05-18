@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import override
 
 format_map = {"-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³"}
@@ -89,6 +90,9 @@ class Letter:
 
     def isInverse(self) -> bool:
         return self.exp < 0
+
+    def inv(self) -> Letter:
+        return Letter(self.sym, -self.exp)
 
 
 def letter_from_str(raw: str) -> Letter:

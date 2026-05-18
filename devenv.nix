@@ -16,11 +16,15 @@
       ps: with ps; [
         graph-tool
         numpy
-        build
         sortedcontainers
+
+        # Distribution
+        build
+        twine
+
+        # Documentation
         sphinx
         sphinx-autobuild
-        twine
         furo
 
         # Testing

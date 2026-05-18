@@ -1,3 +1,4 @@
+from typing import override
 from sortedcontainers import SortedDict
 from .letter import Symbol
 from .word import Word, MutableWord
@@ -19,6 +20,13 @@ class Morphism:
         If a python dictionary is passed, it is automatically converted into a SortedDict. The SortedDict must be a mapping of :py:type:`Symbol` s to :py:class:`Word` s.
         """
         self.morphism_map = SortedDict(map)
+
+    @override
+    def __eq__(self, value: object, /) -> bool:
+        if not isinstance(value, Morphism):
+            return NotImplemented
+        else:
+            return self.morphism_map == value.morphism_map
 
     def map(self, word: Word) -> Word:
         """
