@@ -9,13 +9,16 @@
    .. autosummary::
    
       lfs
+      lfsa
    
    .. rubric:: Functions
 
    .. autosummary::
    
       letter_from_str
+      letter_from_str_alphabet
       lfs
+      lfsa
    
    .. rubric:: Classes
 

@@ -112,10 +112,36 @@ def letter_from_str(raw: str) -> Letter:
         return Letter(splits[0], 1)
     return Letter(splits[0], int(splits[1]))
 
-
 lfs = letter_from_str
 """
-`Alias`_ for :py:func:`letter_from_str`.
+Alias for :py:func:`letter_from_str`.
 
-.. _Alias: https://www.linuxfromscratch.org/
+.. seealso::
+
+    https://www.linuxfromscratch.org/
+
+"""
+
+def letter_from_str_alphabet(char: str) -> Letter:
+    """
+    Another way to generate a letter from a string. This function works exclusively on the English Alphabet, where it considers uppercase letters the inverse of lowercase letters.
+
+    .. warning::
+
+        This function does not work properly with non-alphabetic symbols as it involves bitwise operations.
+
+    >>> letter_from_str_alphabet("a")
+    a
+    >>> letter_from_str_alphabet("A")
+    a⁻¹
+
+    """
+    return Letter(
+        chr((ord(char) & 0b00001111) | 0b01100000),
+        1 if (0b00100000 & ord(char)) else -1,
+    )
+
+lfsa = letter_from_str_alphabet
+"""
+Alias for :py:func:`letter_from_str_alphabet`.
 """

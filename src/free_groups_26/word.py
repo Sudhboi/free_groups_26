@@ -1,7 +1,7 @@
 from __future__ import annotations
 from collections.abc import Iterable
 from typing import override
-from .letter import Letter, Exponent, Symbol, letter_from_str
+from .letter import Letter, Exponent, Symbol, letter_from_str, letter_from_str_alphabet
 from .free_group import FreeGroup
 from sortedcontainers import SortedSet
 
@@ -213,23 +213,13 @@ wfs = word_from_str
 Alias for :py:func:`word_from_str`.
 """
 
-
-def _word_from_str_alphabet_helper(char: str) -> Letter:
-    return Letter(
-        chr((ord(char) & 0b00001111) | 0b01100000),
-        1 if (0b00100000 & ord(char)) else -1,
-    )
-
-
 def word_from_str_alphabet(raw: str) -> Word:
     """
     Another way to generate a :py:type:`word` from a string, when your letters are exclusively from the English alphabet.
     Uppercase letters are considered the inverses of lowercase letters. See below for examples.
     Use of :py:func:`wfsa` is recommended.
 
-    .. warning::
-
-        This function does not work properly with non-alphabetic symbols as it involves bitwise operations.
+    See :py:func:`letter_from_str_alphabet`.
 
     :param str raw: The string to be parsed.
     :return: The returned word is reduced by default.
@@ -240,7 +230,7 @@ def word_from_str_alphabet(raw: str) -> Word:
     a⁻⁴b⁻⁴h⁻⁴m⁻³k²
 
     """
-    return Word(map(_word_from_str_alphabet_helper, raw)).reduced()
+    return Word(map(letter_from_str_alphabet, raw)).reduced()
 
 
 wfsa = word_from_str_alphabet
