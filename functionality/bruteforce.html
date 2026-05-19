@@ -3,11 +3,11 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Word" href="word.html"><link rel="prev" title="Letter" href="letter.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="API" href="../api.html"><link rel="prev" title="Whitehead Automorphism Functions" href="whitehead_automorphism.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>FreeGroup - free_groups_26 v0.0.4 documentation</title>
+        <title>Bruteforce Minimization Functions - free_groups_26 v0.0.4 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -196,19 +196,19 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="classes.html">Classes</a><input aria-label="Toggle navigation of Classes" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="letter.html">Letter</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">FreeGroup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="word.html">Word</a></li>
-<li class="toctree-l2"><a class="reference internal" href="morphism.html">Morphism</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../classes/classes.html">Classes</a><input aria-label="Toggle navigation of Classes" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/letter.html">Letter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/free_group.html">FreeGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/word.html">Word</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/morphism.html">Morphism</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/letter.html">Letter Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/free_group.html">Free Group Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="functions.html">Functions</a><input aria-label="Toggle navigation of Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="letter.html">Letter Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="free_group.html">Free Group Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html">Word Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Bruteforce Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -239,7 +239,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/classes/free_group.rst.txt" title="View this page">
+  <a class="muted-link" href="../_sources/functionality/bruteforce.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -257,37 +257,48 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="freegroup">
-<h1>FreeGroup<a class="headerlink" href="#freegroup" title="Link to this heading">¶</a></h1>
-<p>This class is defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.free_group</span></code>.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="free_groups_26.FreeGroup">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">FreeGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">basis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.FreeGroup" title="Link to this definition">¶</a></dt>
-<dd><p>This class represents a Free Group.</p>
+          <section id="bruteforce-minimization-functions">
+<h1>Bruteforce Minimization Functions<a class="headerlink" href="#bruteforce-minimization-functions" title="Link to this heading">¶</a></h1>
+<p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.minimize_bruteforce</span></code>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.minimize_once_bruteforce">
+<span class="sig-name descname"><span class="pre">minimize_once_bruteforce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">morphism_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#free_groups_26.minimize_once_bruteforce" title="Link to this definition">¶</a></dt>
+<dd><p>Minimizes a word once, if possible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>basis</strong> (<em>set</em><em>[</em><a class="reference internal" href="letter.html#free_groups_26.Symbol" title="free_groups_26.Symbol"><em>Symbol</em></a><em>]</em>) – The basis of the free group.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>word</strong> – The word to be minimized.</p></li>
+<li><p><strong>morphism_list</strong> – The list of all morphisms to try while minimizing the word.</p></li>
+<li><p><strong>log</strong> – (<em>keyword argument only</em>) If there exists a morphism that reduces a word, its string and the new word is appended to the log, if passed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns a tuple of (<a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.Word"><code class="xref py py-class docutils literal notranslate"><span class="pre">Word</span></code></a>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>). The second element specifies whether the word was reduced.</p>
 </dd>
 </dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="free_groups_26.FreeGroup.basis">
-<span class="sig-name descname"><span class="pre">basis</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#free_groups_26.FreeGroup.basis" title="Link to this definition">¶</a></dt>
-<dd><p>Implemented using a SortedSet from sortedcontainers.</p>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="free_groups_26.FreeGroup.rank">
-<span class="sig-name descname"><span class="pre">rank</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#free_groups_26.FreeGroup.rank" title="Link to this definition">¶</a></dt>
-<dd><p>Automatically inferred from <a class="reference internal" href="#free_groups_26.FreeGroup.basis" title="free_groups_26.FreeGroup.basis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">basis</span></code></a>.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="free_groups_26.FreeGroup.alphabet">
-<span class="sig-name descname"><span class="pre">alphabet</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#free_groups_26.FreeGroup.alphabet" title="Link to this definition">¶</a></dt>
-<dd><p>Also implemented using a SortedSet. Represented by <span class="math notranslate nohighlight">\(X^{\pm}\)</span>.</p>
-<p>Automatically inferred from <a class="reference internal" href="#free_groups_26.FreeGroup.basis" title="free_groups_26.FreeGroup.basis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">basis</span></code></a>. For <span class="math notranslate nohighlight">\(x \in X\)</span>, <span class="math notranslate nohighlight">\(x, x^{-1} \in X^{\pm}\)</span>.</p>
-</dd></dl>
-
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.minimize_bruteforce">
+<span class="sig-name descname"><span class="pre">minimize_bruteforce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">morphism_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.minimize_bruteforce" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the minimized form of the word, which might be the same word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>morphism_list</strong> – If an iterable of morphisms is not provided, <a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_all_t2_whitehead_automorphisms" title="free_groups_26.generate_all_t2_whitehead_automorphisms"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_all_t2_whitehead_automorphisms()</span></code></a> is used to generate all possible Whitehead automorphisms for the given word. It is recommended that the list is generated and passed if working with multiple words from the same free group.</p></li>
+<li><p><strong>log</strong> – <em>(keyword argument only)</em> All mimization operations are appended as strings to the log, if passed.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_bruteforce</span><span class="p">(</span><span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a b^2 c&quot;</span><span class="p">),</span> <span class="n">log</span><span class="o">=</span><span class="n">log</span><span class="p">),</span> <span class="n">log</span>
+<span class="go">(c,</span>
+<span class="go"> [&quot;(SortedDict({&#39;a&#39;: ab⁻¹}), abc)&quot;,</span>
+<span class="go">  &quot;(SortedDict({&#39;b&#39;: a⁻¹b}), bc)&quot;,</span>
+<span class="go">  &quot;(SortedDict({&#39;c&#39;: b⁻¹c}), c)&quot;,</span>
+<span class="go">  &#39;False&#39;])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -297,23 +308,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="word.html">
+          <a class="next-page" href="../api.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Word</div>
+                <div class="title">API</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="letter.html">
+          <a class="prev-page" href="whitehead_automorphism.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Letter</div>
+                <div class="title">Whitehead Automorphism Functions</div>
                 
               </div>
             </a>
@@ -347,13 +358,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">FreeGroup</a><ul>
-<li><a class="reference internal" href="#free_groups_26.FreeGroup"><code class="docutils literal notranslate"><span class="pre">FreeGroup</span></code></a><ul>
-<li><a class="reference internal" href="#free_groups_26.FreeGroup.basis"><code class="docutils literal notranslate"><span class="pre">FreeGroup.basis</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.FreeGroup.rank"><code class="docutils literal notranslate"><span class="pre">FreeGroup.rank</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.FreeGroup.alphabet"><code class="docutils literal notranslate"><span class="pre">FreeGroup.alphabet</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Bruteforce Minimization Functions</a><ul>
+<li><a class="reference internal" href="#free_groups_26.minimize_once_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_once_bruteforce()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.minimize_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_bruteforce()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -369,6 +376,5 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     </body>
 </html>

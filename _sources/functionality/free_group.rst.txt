@@ -9,7 +9,4 @@ Free Group Functions
 
 These functions are defined in ``free_groups_26.free_group``.
 
-Functions
----------
-
 .. autofunction:: get_free_group
