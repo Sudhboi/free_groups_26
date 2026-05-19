@@ -1,9 +1,9 @@
 from __future__ import annotations
 from typing import override
 
-format_map = {"-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³"}
+_format_map = {"-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³"}
 for i in range(4, 10):
-    format_map[str(i)] = chr(0x2070 + i)
+    _format_map[str(i)] = chr(0x2070 + i)
 
 type Symbol = str
 type Exponent = int
@@ -58,7 +58,7 @@ class Letter:
         if self.exp == 1:
             return self.sym
         else:
-            return self.sym + "".join([format_map[i] for i in str(self.exp)])
+            return self.sym + "".join([_format_map[i] for i in str(self.exp)])
 
     def __lt__(self, other: object) -> bool:
         """
@@ -112,6 +112,7 @@ def letter_from_str(raw: str) -> Letter:
         return Letter(splits[0], 1)
     return Letter(splits[0], int(splits[1]))
 
+
 lfs = letter_from_str
 """
 Alias for :py:func:`letter_from_str`.
@@ -121,6 +122,7 @@ Alias for :py:func:`letter_from_str`.
     https://www.linuxfromscratch.org/
 
 """
+
 
 def letter_from_str_alphabet(char: str) -> Letter:
     """
@@ -140,6 +142,7 @@ def letter_from_str_alphabet(char: str) -> Letter:
         chr((ord(char) & 0b00001111) | 0b01100000),
         1 if (0b00100000 & ord(char)) else -1,
     )
+
 
 lfsa = letter_from_str_alphabet
 """

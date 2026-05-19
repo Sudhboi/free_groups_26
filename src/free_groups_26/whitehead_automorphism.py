@@ -3,17 +3,16 @@ from .letter import Letter, Symbol
 from .word import Word
 from .free_group import FreeGroup
 from .morphism import Morphism
-from itertools import (chain, combinations)
+from itertools import chain, combinations
 from sortedcontainers import SortedDict, SortedSet
+
 
 def _powerset(iterable):
     s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
-def generate_whitehead_automorphism_t2(
-        x : Letter,
-        A : Iterable[Letter]
-    ) -> Morphism:
+
+def generate_whitehead_automorphism_t2(x: Letter, A: Iterable[Letter]) -> Morphism:
     """
     This function generates a Type 2 Whitehead Automorphism, using the following piecewise definition. (Credit: Virning, 1988)
 
@@ -54,18 +53,18 @@ def generate_whitehead_automorphism_t2(
 
     return Morphism(phi_map)
 
-def generate_all_t2_whitehead_automorphisms(inp : FreeGroup | set[Symbol] ) -> list[Morphism]:
+
+def generate_all_t2_whitehead_automorphisms(
+    inp: FreeGroup | set[Symbol],
+) -> list[Morphism]:
     """
     This function generates all Type 2 Whitehead Automorphisms for a given set of symbols. This function has a time and space complexity of :math:`O(4^n)`.
     """
     L_n = inp.alphabet if isinstance(inp, FreeGroup) else FreeGroup(inp).alphabet
-    morphism_list : list[Morphism] = []
+    morphism_list: list[Morphism] = []
     for A in _powerset(L_n):
         for x in A:
             phi = generate_whitehead_automorphism_t2(x, A)
             if phi.morphism_map != {}:
                 morphism_list.append(phi)
     return morphism_list
-
-
-

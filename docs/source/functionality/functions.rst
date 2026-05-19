@@ -7,3 +7,4 @@ Functions
    free_group
    word
    whitehead_automorphism
+   bruteforce

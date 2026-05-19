@@ -213,6 +213,7 @@ wfs = word_from_str
 Alias for :py:func:`word_from_str`.
 """
 
+
 def word_from_str_alphabet(raw: str) -> Word:
     """
     Another way to generate a :py:type:`word` from a string, when your letters are exclusively from the English alphabet.
