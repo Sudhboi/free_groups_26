@@ -88,11 +88,14 @@ class Letter:
         """
         return "{}^{}".format(self.sym, self.exp)
 
-    def isInverse(self) -> bool:
+    def is_inverse(self) -> bool:
         return self.exp < 0
 
     def inv(self) -> Letter:
         return Letter(self.sym, -self.exp)
+
+    def get_base(self) -> Letter:
+        return Letter(self.sym, (self.exp > 0) - (self.exp < 0))
 
 
 def letter_from_str(raw: str) -> Letter:

@@ -20,6 +20,7 @@ dist
 *__pycache__
 .pytest_cache
 jupyter_test
+temp
 
 # documentation
 docs/build

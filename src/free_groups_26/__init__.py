@@ -15,3 +15,4 @@ from .whitehead_automorphism import (
     generate_all_t2_whitehead_automorphisms,
 )
 from .minimize_bruteforce import minimize_once_bruteforce, minimize_bruteforce
+from .whitehead_graph import WhiteheadGraph

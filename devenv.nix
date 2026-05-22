@@ -78,6 +78,11 @@
     cd -
   '';
 
+  scripts.format.exec = ''
+    cd $DEVENV_ROOT
+    black ./src 
+    cd -
+  '';
   # https://devenv.sh/basics/
   enterShell = "";
 
