@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -252,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -260,53 +260,6 @@
           <section id="word-functions">
 <h1>Word Functions<a class="headerlink" href="#word-functions" title="Link to this heading">¶</a></h1>
 <p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.word</span></code>.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.wfs">
-<span class="sig-name descname"><span class="pre">wfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfs" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.word_from_str">
-<span class="sig-name descname"><span class="pre">word_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str" title="Link to this definition">¶</a></dt>
-<dd><p>Generates a word from a string of the format <code class="docutils literal notranslate"><span class="pre">&quot;{sym}^{exp}</span> <span class="pre">{letter}</span> <span class="pre">...</span></code>. This is consistent with <a class="reference internal" href="letter.html#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.
-Use of <a class="reference internal" href="#free_groups_26.wfs" title="free_groups_26.wfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfs()</span></code></a> is recommended.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>raw</strong> (<em>str</em>) – The string to be parsed.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.word_from_str_alphabet">
-<span class="sig-name descname"><span class="pre">word_from_str_alphabet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str_alphabet" title="Link to this definition">¶</a></dt>
-<dd><p>Another way to generate a <a class="reference internal" href="../generated/free_groups_26.word.html#module-free_groups_26.word" title="free_groups_26.word"><code class="xref py py-type docutils literal notranslate"><span class="pre">word</span></code></a> from a string, when your letters are exclusively from the English alphabet.
-Uppercase letters are considered the inverses of lowercase letters. See below for examples.
-Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_groups_26.wfsa"><code class="xref py py-func docutils literal notranslate"><span class="pre">wfsa()</span></code></a> is recommended.</p>
-<p>See <a class="reference internal" href="letter.html#free_groups_26.letter_from_str_alphabet" title="free_groups_26.letter_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str_alphabet()</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>raw</strong> (<em>str</em>) – The string to be parsed.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The returned word is reduced by default.</p>
-</dd>
-</dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;aaaAbBCCccccc&quot;</span><span class="p">)</span>
-<span class="go">a²c³</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;AAAABBBBHHHHMMMkk&quot;</span><span class="p">)</span>
-<span class="go">a⁻⁴b⁻⁴h⁻⁴m⁻³k²</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.wfsa">
-<span class="sig-name descname"><span class="pre">wfsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfsa" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str_alphabet" title="free_groups_26.word_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a>.</p>
-</dd></dl>
-
 </section>
 
         </article>
@@ -352,30 +305,8 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Word Functions</a><ul>
-<li><a class="reference internal" href="#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

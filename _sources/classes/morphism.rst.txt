@@ -6,6 +6,7 @@ Morphism
 .. testsetup::
 
    from free_groups_26 import *
+   from sortedcontainers import SortedDict
 
 This class is defined in ``free_groups_26.morphism``.
 

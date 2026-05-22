@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -252,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -260,47 +260,6 @@
           <section id="bruteforce-minimization-functions">
 <h1>Bruteforce Minimization Functions<a class="headerlink" href="#bruteforce-minimization-functions" title="Link to this heading">¶</a></h1>
 <p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.minimize_bruteforce</span></code>.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.minimize_once_bruteforce">
-<span class="sig-name descname"><span class="pre">minimize_once_bruteforce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">morphism_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#free_groups_26.minimize_once_bruteforce" title="Link to this definition">¶</a></dt>
-<dd><p>Minimizes a word once, if possible.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>word</strong> – The word to be minimized.</p></li>
-<li><p><strong>morphism_list</strong> – The list of all morphisms to try while minimizing the word.</p></li>
-<li><p><strong>log</strong> – (<em>keyword argument only</em>) If there exists a morphism that reduces a word, its string and the new word is appended to the log, if passed.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns a tuple of (<a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.Word"><code class="xref py py-class docutils literal notranslate"><span class="pre">Word</span></code></a>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>). The second element specifies whether the word was reduced.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.minimize_bruteforce">
-<span class="sig-name descname"><span class="pre">minimize_bruteforce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">morphism_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.minimize_bruteforce" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the minimized form of the word, which might be the same word.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>morphism_list</strong> – If an iterable of morphisms is not provided, <a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_all_t2_whitehead_automorphisms" title="free_groups_26.generate_all_t2_whitehead_automorphisms"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_all_t2_whitehead_automorphisms()</span></code></a> is used to generate all possible Whitehead automorphisms for the given word. It is recommended that the list is generated and passed if working with multiple words from the same free group.</p></li>
-<li><p><strong>log</strong> – <em>(keyword argument only)</em> All mimization operations are appended as strings to the log, if passed.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_bruteforce</span><span class="p">(</span><span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a b^2 c&quot;</span><span class="p">),</span> <span class="n">log</span><span class="o">=</span><span class="n">log</span><span class="p">),</span> <span class="n">log</span>
-<span class="go">(c,</span>
-<span class="go"> [&quot;(SortedDict({&#39;a&#39;: ab⁻¹}), abc)&quot;,</span>
-<span class="go">  &quot;(SortedDict({&#39;b&#39;: a⁻¹b}), bc)&quot;,</span>
-<span class="go">  &quot;(SortedDict({&#39;c&#39;: b⁻¹c}), c)&quot;,</span>
-<span class="go">  &#39;False&#39;])</span>
-</pre></div>
-</div>
-</dd></dl>
-
 </section>
 
         </article>
@@ -346,28 +305,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Bruteforce Minimization Functions</a><ul>
-<li><a class="reference internal" href="#free_groups_26.minimize_once_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_once_bruteforce()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.minimize_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_bruteforce()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

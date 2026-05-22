@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -252,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -260,43 +260,6 @@
           <section id="whitehead-automorphism-functions">
 <h1>Whitehead Automorphism Functions<a class="headerlink" href="#whitehead-automorphism-functions" title="Link to this heading">¶</a></h1>
 <p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.whitehead_automorphism</span></code>.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.generate_whitehead_automorphism_t2">
-<span class="sig-name descname"><span class="pre">generate_whitehead_automorphism_t2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a></span></span><a class="headerlink" href="#free_groups_26.generate_whitehead_automorphism_t2" title="Link to this definition">¶</a></dt>
-<dd><p>This function generates a Type 2 Whitehead Automorphism, using the following piecewise definition. (Credit: Virning, 1988)</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[\begin{split}(A, x) y = \begin{cases} 
-    yx &amp; \text{if } y \in A, y \notin A, y \notin \{x, \bar{x}\} \\ 
-    \bar{x} y &amp; \text{if } y \notin A, \bar{y} \in A, y \notin \{x, \bar{x}\} \\ 
-    \bar{x} yx &amp; \text{if } y, \bar{y} \in A \\ 
-    y &amp; \text{otherwise} 
-\end{cases}\end{split}\]</div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – Corresponds to <span class="math notranslate nohighlight">\(x\)</span> in the definition.</p></li>
-<li><p><strong>A</strong> – Corresponds to <span class="math notranslate nohighlight">\(A\)</span> in the definition.</p></li>
-</ul>
-</dd>
-</dl>
-<p>Instead of iterating through all the symbols in a free group, this function only goes through the symbols in <code class="docutils literal notranslate"><span class="pre">A</span></code> as the rest get mapped to themselves.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wh</span> <span class="o">=</span> <span class="n">generate_whitehead_automorphism_t2</span><span class="p">(</span><span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="p">{</span><span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;a^-1&quot;</span><span class="p">),</span> <span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">),</span> <span class="n">lfs</span><span class="p">(</span><span class="s2">&quot;c^-1&quot;</span><span class="p">)})</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">wh</span><span class="o">.</span><span class="n">morphism_map</span><span class="p">)</span>
-<span class="go">SortedDict({&#39;a&#39;: b⁻¹ab, &#39;c&#39;: b⁻¹c})</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">wh</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">wfsa</span><span class="p">(</span><span class="s2">&quot;bac&quot;</span><span class="p">)))</span>
-<span class="go">ac</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.generate_all_t2_whitehead_automorphisms">
-<span class="sig-name descname"><span class="pre">generate_all_t2_whitehead_automorphisms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.free_group.FreeGroup"><span class="pre">FreeGroup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#free_groups_26.generate_all_t2_whitehead_automorphisms" title="Link to this definition">¶</a></dt>
-<dd><p>This function generates all Type 2 Whitehead Automorphisms for a given set of symbols. This function has a time and space complexity of <span class="math notranslate nohighlight">\(O(4^n)\)</span>.</p>
-</dd></dl>
-
 </section>
 
         </article>
@@ -342,28 +305,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Whitehead Automorphism Functions</a><ul>
-<li><a class="reference internal" href="#free_groups_26.generate_whitehead_automorphism_t2"><code class="docutils literal notranslate"><span class="pre">generate_whitehead_automorphism_t2()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.generate_all_t2_whitehead_automorphisms"><code class="docutils literal notranslate"><span class="pre">generate_all_t2_whitehead_automorphisms()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
@@ -372,6 +315,5 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     </body>
 </html>
