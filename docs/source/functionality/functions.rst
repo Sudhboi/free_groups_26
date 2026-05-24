@@ -8,3 +8,4 @@ Functions
    word
    whitehead_automorphism
    bruteforce
+   whitehead_graph

@@ -1,4 +1,5 @@
 from __future__ import annotations
+import random
 from collections.abc import Iterable
 from typing import override
 from .letter import Letter, Exponent, Symbol, letter_from_str, letter_from_str_alphabet
@@ -238,3 +239,30 @@ wfsa = word_from_str_alphabet
 """
 Alias for :py:func:`word_from_str_alphabet`.
 """
+
+
+def generate_random_word(group: FreeGroup, length: int, variation: int) -> Word:
+    """
+    Generates a cyclically reduced pseudo-random word from the given free group.
+
+    :param group: The free group of the generated word.
+    :type group: :py:class:`FreeGroup`
+    :param int length: The length of the generated word will be roughly around ``length`` :math:`\\pm` ``variation``.
+    :param int variation: The absolute value of the highest power of a letter in the free group. For example, if ``variation = 4``, the exponents of
+                          the letters in the word are guaranteed to be between 4 and -4.
+    """
+    newWord = MutableWord([])
+    prevSym: Symbol = ""
+    count = 0
+    while count <= length:
+        sym: Symbol = tuple(group.basis)[random.randint(0, group.rank - 1)]
+        if sym == prevSym:
+            continue
+        prevSym = sym
+        expo = 0
+        while expo == 0:
+            expo = random.randint(-variation, variation)
+        newWord.word.append(Letter(sym, expo))
+        count += abs(expo)
+    _reduce_cyclic(newWord.word)
+    return newWord.immutable()

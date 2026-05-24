@@ -7,3 +7,4 @@ Classes
    free_group
    word
    morphism
+   whitehead_graph
