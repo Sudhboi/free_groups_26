@@ -15,6 +15,7 @@
 
    .. autosummary::
    
+      generate_random_word
       wfs
       wfsa
       word_from_str

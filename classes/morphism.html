@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Functions" href="../functionality/functions.html"><link rel="prev" title="Word" href="word.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Whitehead Graph" href="whitehead_graph.html"><link rel="prev" title="Word" href="word.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="free_group.html">FreeGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="word.html">Word</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -209,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_graph.html">Whitehead Graph Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -252,7 +254,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -260,6 +262,37 @@
           <section id="morphism">
 <h1>Morphism<a class="headerlink" href="#morphism" title="Link to this heading">¶</a></h1>
 <p>This class is defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.morphism</span></code>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="free_groups_26.Morphism">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Morphism</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SortedDict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Morphism" title="Link to this definition">¶</a></dt>
+<dd><p>This class represents a morphism.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>map</strong> (<em>sortedcontainers.SortedDict</em><em> or </em><em>dict</em><em>[</em><a class="reference internal" href="letter.html#free_groups_26.Symbol" title="free_groups_26.Symbol"><em>Symbol</em></a><em>, </em><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.Word"><em>Word</em></a><em>]</em>) – The mapping of the morphism.</p>
+</dd>
+</dl>
+<p>If a python dictionary is passed, it is automatically converted into a SortedDict. The SortedDict must be a mapping of <a class="reference internal" href="letter.html#free_groups_26.Symbol" title="free_groups_26.Symbol"><code class="xref py py-type docutils literal notranslate"><span class="pre">Symbol</span></code></a> s to <a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.Word"><code class="xref py py-class docutils literal notranslate"><span class="pre">Word</span></code></a> s.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="free_groups_26.Morphism.morphism_map">
+<span class="sig-name descname"><span class="pre">morphism_map</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Symbol</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#free_groups_26.Morphism.morphism_map" title="Link to this definition">¶</a></dt>
+<dd><p>Implemented using a SortedDict from sortedcontainers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Morphism.map">
+<span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Morphism.map" title="Link to this definition">¶</a></dt>
+<dd><p>Applies the morphism to a given word. If a symbol in the word has a map in <a class="reference internal" href="#free_groups_26.Morphism.morphism_map" title="free_groups_26.Morphism.morphism_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">morphism_map</span></code></a>, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">SortedDict</span><span class="p">({</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a b^-1&quot;</span><span class="p">)})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">phi</span> <span class="o">=</span> <span class="n">Morphism</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;a^2 b^3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">phi</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+<span class="go">ab⁻¹ab²</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
         </article>
@@ -267,12 +300,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../functionality/functions.html">
+          <a class="next-page" href="whitehead_graph.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Functions</div>
+                <div class="title">Whitehead Graph</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -305,8 +338,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Morphism</a><ul>
+<li><a class="reference internal" href="#free_groups_26.Morphism"><code class="docutils literal notranslate"><span class="pre">Morphism</span></code></a><ul>
+<li><a class="reference internal" href="#free_groups_26.Morphism.morphism_map"><code class="docutils literal notranslate"><span class="pre">Morphism.morphism_map</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Morphism.map"><code class="docutils literal notranslate"><span class="pre">Morphism.map()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

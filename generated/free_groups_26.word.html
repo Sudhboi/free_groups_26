@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../classes/free_group.html">FreeGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/word.html">Word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/morphism.html">Morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/whitehead_graph.html">Whitehead Graph</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -209,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_graph.html">Whitehead Graph Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
@@ -276,16 +278,19 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wfs</span></code>(raw)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_random_word</span></code>(group, length, variation)</p></td>
+<td><p>Generates a cyclically reduced pseudo-random word from the given free group.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wfs</span></code>(raw)</p></td>
 <td><p>Alias for <code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wfsa</span></code>(raw)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wfsa</span></code>(raw)</p></td>
 <td><p>Alias for <code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">word_from_str</span></code>(raw)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">word_from_str</span></code>(raw)</p></td>
 <td><p>Generates a word from a string of the format <code class="docutils literal notranslate"><span class="pre">&quot;{sym}^{exp}</span> <span class="pre">{letter}</span> <span class="pre">...</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">word_from_str_alphabet</span></code>(raw)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">word_from_str_alphabet</span></code>(raw)</p></td>
 <td><p>Another way to generate a <code class="xref py py-type docutils literal notranslate"><span class="pre">word</span></code> from a string, when your letters are exclusively from the English alphabet.</p></td>
 </tr>
 </tbody>
@@ -298,7 +303,7 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MutableWord</span></code>(letters)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Word</span></code>(word)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Word</span></code></a>(word)</p></td>
 <td><p>This class represents a word.</p></td>
 </tr>
 </tbody>

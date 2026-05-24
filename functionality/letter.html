@@ -173,7 +173,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../classes/free_group.html">FreeGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/word.html">Word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/morphism.html">Morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/whitehead_graph.html">Whitehead Graph</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="functions.html">Functions</a><input aria-label="Toggle navigation of Functions" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
@@ -209,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="word.html">Word Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -252,7 +254,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
@@ -260,6 +262,52 @@
           <section id="letter-functions">
 <h1>Letter Functions<a class="headerlink" href="#letter-functions" title="Link to this heading">¶</a></h1>
 <p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.letter</span></code>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.letter_from_str">
+<span class="sig-name descname"><span class="pre">letter_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.letter_from_str" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a letter from a string of the format <code class="docutils literal notranslate"><span class="pre">{sym}^{exp}</span></code>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><a class="reference internal" href="#free_groups_26.lfs" title="free_groups_26.lfs"><code class="xref py py-func docutils literal notranslate"><span class="pre">lfs()</span></code></a> is a concise alias for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter_from_str</span><span class="p">(</span><span class="s2">&quot;b^32&quot;</span><span class="p">)</span>
+<span class="go">b³²</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.lfs">
+<span class="sig-name descname"><span class="pre">lfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.lfs" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://www.linuxfromscratch.org/">https://www.linuxfromscratch.org/</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.letter_from_str_alphabet">
+<span class="sig-name descname"><span class="pre">letter_from_str_alphabet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.letter_from_str_alphabet" title="Link to this definition">¶</a></dt>
+<dd><p>Another way to generate a letter from a string. This function works exclusively on the English Alphabet, where it considers uppercase letters the inverse of lowercase letters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function does not work properly with non-alphabetic symbols as it involves bitwise operations.</p>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="go">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">letter_from_str_alphabet</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="go">a⁻¹</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.lfsa">
+<span class="sig-name descname"><span class="pre">lfsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.lfsa" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.letter_from_str_alphabet" title="free_groups_26.letter_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str_alphabet()</span></code></a>.</p>
+</dd></dl>
+
 </section>
 
         </article>
@@ -305,8 +353,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Letter Functions</a><ul>
+<li><a class="reference internal" href="#free_groups_26.letter_from_str"><code class="docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.lfs"><code class="docutils literal notranslate"><span class="pre">lfs()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.letter_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">letter_from_str_alphabet()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.lfsa"><code class="docutils literal notranslate"><span class="pre">lfsa()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

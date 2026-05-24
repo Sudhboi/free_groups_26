@@ -201,6 +201,7 @@
 <li class="toctree-l2"><a class="reference internal" href="free_group.html">FreeGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="word.html">Word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="morphism.html">Morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../functionality/functions.html">Functions</a><input aria-label="Toggle navigation of Functions" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -209,6 +210,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../functionality/word.html">Word Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_graph.html">Whitehead Graph Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -261,10 +263,58 @@
 <h1>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="letter.html">Letter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="free_group.html">FreeGroup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="word.html">Word</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphism.html">Morphism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="letter.html">Letter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="letter.html#free_groups_26.Symbol"><code class="docutils literal notranslate"><span class="pre">Symbol</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="letter.html#free_groups_26.Exponent"><code class="docutils literal notranslate"><span class="pre">Exponent</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="letter.html#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter.__lt__"><code class="docutils literal notranslate"><span class="pre">Letter.__lt__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="letter.html#free_groups_26.Letter.get_copyable"><code class="docutils literal notranslate"><span class="pre">Letter.get_copyable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="free_group.html">FreeGroup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup"><code class="docutils literal notranslate"><span class="pre">FreeGroup</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.basis"><code class="docutils literal notranslate"><span class="pre">FreeGroup.basis</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.rank"><code class="docutils literal notranslate"><span class="pre">FreeGroup.rank</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="free_group.html#free_groups_26.FreeGroup.alphabet"><code class="docutils literal notranslate"><span class="pre">FreeGroup.alphabet</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="word.html">Word</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.Word"><code class="docutils literal notranslate"><span class="pre">Word</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.word"><code class="docutils literal notranslate"><span class="pre">Word.word</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.length"><code class="docutils literal notranslate"><span class="pre">Word.length</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.reduced"><code class="docutils literal notranslate"><span class="pre">Word.reduced()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.concat"><code class="docutils literal notranslate"><span class="pre">Word.concat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.__mul__"><code class="docutils literal notranslate"><span class="pre">Word.__mul__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.inv"><code class="docutils literal notranslate"><span class="pre">Word.inv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.__pow__"><code class="docutils literal notranslate"><span class="pre">Word.__pow__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.__repr__"><code class="docutils literal notranslate"><span class="pre">Word.__repr__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.__eq__"><code class="docutils literal notranslate"><span class="pre">Word.__eq__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.strict_equality"><code class="docutils literal notranslate"><span class="pre">Word.strict_equality()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.infer_free_group"><code class="docutils literal notranslate"><span class="pre">Word.infer_free_group()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.Word.get_copyable"><code class="docutils literal notranslate"><span class="pre">Word.get_copyable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="morphism.html">Morphism</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="morphism.html#free_groups_26.Morphism"><code class="docutils literal notranslate"><span class="pre">Morphism</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="morphism.html#free_groups_26.Morphism.morphism_map"><code class="docutils literal notranslate"><span class="pre">Morphism.morphism_map</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="morphism.html#free_groups_26.Morphism.map"><code class="docutils literal notranslate"><span class="pre">Morphism.map()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html#free_groups_26.WhiteheadGraph"><code class="docutils literal notranslate"><span class="pre">WhiteheadGraph</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
