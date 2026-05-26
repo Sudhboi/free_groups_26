@@ -32,7 +32,8 @@
         # Testing
         pytest
         jupyter
-
+        jupyterlab-vim
+        jupyterlab-lsp
       ]
     ))
     python3

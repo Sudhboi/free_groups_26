@@ -9,3 +9,4 @@ API
     free_groups_26.word
     free_groups_26.morphism
     free_groups_26.whitehead_automorphism
+    free_groups_26.whitehead_graph

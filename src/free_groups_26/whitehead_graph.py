@@ -9,6 +9,9 @@ type WhiteheadGraph = Graph[Letter]
 
 
 def generate_whg(word: Word) -> WhiteheadGraph:
+    """
+    Generates a Whitehead Graph for the given word.
+    """
     whg: WhiteheadGraph = Graph()
     cyclic = word.word + (word.word[0],)
 
@@ -27,6 +30,9 @@ def generate_whg(word: Word) -> WhiteheadGraph:
 def change_whg_edge_or_weight(
     whg: WhiteheadGraph, v1: Letter, v2: Letter, weight: int = 1
 ) -> None:
+    """
+    Changes the edge weights for an edge if it exists, otherwise adds the given edge to the graph.
+    """
     try:
         whg[v1][v2]["weight"] += weight
     except KeyError:
@@ -34,6 +40,9 @@ def change_whg_edge_or_weight(
 
 
 def draw_graph(G: WhiteheadGraph) -> None:
+    """
+    Uses matplotlib to draw the given Whitehead Graph.
+    """
     pos = nx.spring_layout(G)
     _ = nx.draw_networkx_nodes(G, pos, node_size=700)
     _ = nx.draw_networkx_labels(G, pos, font_size=20)

@@ -19,7 +19,7 @@ def generate_whitehead_automorphism_t2(x: Letter, A: Iterable[Letter]) -> Morphi
     .. math::
 
         (A, x) y = \\begin{cases} 
-            yx & \\text{if } y \\in A, y \\notin A, y \\notin \\{x, \\bar{x}\\} \\\\ 
+            yx & \\text{if } y \\in A, \\bar{y} \\notin A, y \\notin \\{x, \\bar{x}\\} \\\\ 
             \\bar{x} y & \\text{if } y \\notin A, \\bar{y} \\in A, y \\notin \\{x, \\bar{x}\\} \\\\ 
             \\bar{x} yx & \\text{if } y, \\bar{y} \\in A \\\\ 
             y & \\text{otherwise} 
