@@ -211,6 +211,7 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html">Whitehead Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -219,6 +220,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_graph.html">free_groups_26.whitehead_graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_minimization.html">free_groups_26.whitehead_minimization</a></li>
 </ul>
 </li>
 </ul>
@@ -269,7 +272,7 @@
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
 \[\begin{split}(A, x) y = \begin{cases} 
-    yx &amp; \text{if } y \in A, y \notin A, y \notin \{x, \bar{x}\} \\ 
+    yx &amp; \text{if } y \in A, \bar{y} \notin A, y \notin \{x, \bar{x}\} \\ 
     \bar{x} y &amp; \text{if } y \notin A, \bar{y} \in A, y \notin \{x, \bar{x}\} \\ 
     \bar{x} yx &amp; \text{if } y, \bar{y} \in A \\ 
     y &amp; \text{otherwise} 

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="API" href="../api.html"><link rel="prev" title="Bruteforce Minimization Functions" href="bruteforce.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Whitehead Minimization Functions" href="whitehead_minimization.html"><link rel="prev" title="Bruteforce Minimization Functions" href="bruteforce.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
@@ -211,6 +211,7 @@
 <li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Whitehead Graph Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html">Whitehead Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -219,6 +220,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_graph.html">free_groups_26.whitehead_graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_minimization.html">free_groups_26.whitehead_minimization</a></li>
 </ul>
 </li>
 </ul>
@@ -265,17 +268,20 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.generate_whg">
 <span class="sig-name descname"><span class="pre">generate_whg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">WhiteheadGraph</span></span></span><a class="headerlink" href="#free_groups_26.generate_whg" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Generates a Whitehead Graph for the given word.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.change_whg_edge_or_weight">
 <span class="sig-name descname"><span class="pre">change_whg_edge_or_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">whg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">WhiteheadGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#free_groups_26.change_whg_edge_or_weight" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Changes the edge weights for an edge if it exists, otherwise adds the given edge to the graph.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.draw_graph">
 <span class="sig-name descname"><span class="pre">draw_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">WhiteheadGraph</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#free_groups_26.draw_graph" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Uses matplotlib to draw the given Whitehead Graph.</p>
+</dd></dl>
 
 </section>
 
@@ -284,12 +290,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../api.html">
+          <a class="next-page" href="whitehead_minimization.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">API</div>
+                <div class="title">Whitehead Minimization Functions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

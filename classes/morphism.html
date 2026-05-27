@@ -211,6 +211,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_automorphism.html">Whitehead Automorphism Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_graph.html">Whitehead Graph Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_minimization.html">Whitehead Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -219,6 +220,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.word.html">free_groups_26.word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.morphism.html">free_groups_26.morphism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_graph.html">free_groups_26.whitehead_graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_minimization.html">free_groups_26.whitehead_minimization</a></li>
 </ul>
 </li>
 </ul>
@@ -291,6 +294,16 @@
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Morphism.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Morphism.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Morphisms can be applied to words by directly calling them. (Aliased to <a class="reference internal" href="#free_groups_26.Morphism.map" title="free_groups_26.Morphism.map"><code class="xref py py-meth docutils literal notranslate"><span class="pre">map()</span></code></a>.)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">phi</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+<span class="go">ab⁻¹ab²</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -354,6 +367,7 @@
 <li><a class="reference internal" href="#free_groups_26.Morphism"><code class="docutils literal notranslate"><span class="pre">Morphism</span></code></a><ul>
 <li><a class="reference internal" href="#free_groups_26.Morphism.morphism_map"><code class="docutils literal notranslate"><span class="pre">Morphism.morphism_map</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Morphism.map"><code class="docutils literal notranslate"><span class="pre">Morphism.map()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Morphism.__call__"><code class="docutils literal notranslate"><span class="pre">Morphism.__call__()</span></code></a></li>
 </ul>
 </li>
 </ul>
