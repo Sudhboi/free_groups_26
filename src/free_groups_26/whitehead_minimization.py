@@ -53,7 +53,7 @@ def minimize_whitehead_once(word : Word,/,  fg : FreeGroup | None = None, log : 
             log.append("Minimal")
         return None
 
-def minimize_whitehead(word : Word, /, fg : FreeGroup | None, log : list[str] | None = None) -> Word:
+def minimize_whitehead(word : Word, /, fg : FreeGroup | None = None, log : list[str] | None = None) -> Word:
     """
     Whitehead Minimizes a word. 
 
