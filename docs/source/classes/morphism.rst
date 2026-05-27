@@ -12,3 +12,4 @@ This class is defined in ``free_groups_26.morphism``.
 
 .. autoclass:: Morphism
    :members:
+   :special-members: __call__

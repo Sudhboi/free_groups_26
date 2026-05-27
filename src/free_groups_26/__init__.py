@@ -28,3 +28,4 @@ from .whitehead_graph import (
     change_whg_edge_or_weight,
     draw_graph,
 )
+from .whitehead_minimization import minimize_whitehead_once, minimize_whitehead

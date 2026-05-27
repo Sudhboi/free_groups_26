@@ -10,3 +10,4 @@ API
     free_groups_26.morphism
     free_groups_26.whitehead_automorphism
     free_groups_26.whitehead_graph
+    free_groups_26.whitehead_minimization

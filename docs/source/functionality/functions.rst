@@ -9,3 +9,4 @@ Functions
    whitehead_automorphism
    bruteforce
    whitehead_graph
+   whitehead_minimization

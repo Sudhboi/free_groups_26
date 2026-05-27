@@ -1,4 +1,4 @@
-from typing import override
+from typing import override, Any
 from sortedcontainers import SortedDict
 from .letter import Symbol
 from .word import Word, MutableWord
@@ -46,3 +46,13 @@ class Morphism:
             else:
                 newWord.word.extend((self.morphism_map[letter.sym] ** letter.exp).word)
         return newWord.immutable().reduced()
+
+    def __call__(self, word : Word, *args: Any, **kwds: Any) -> Word:
+        """
+        Morphisms can be applied to words by directly calling them. (Aliased to :py:meth:`map`.)
+
+        >>> phi(w)
+        ab⁻¹ab²
+
+        """
+        return self.map(word)
