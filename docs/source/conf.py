@@ -15,7 +15,7 @@ sys.path.insert(0, path)
 project = 'free_groups_26'
 copyright = '2026, Sudhir Krisna'
 author = 'Sudhir Krisna'
-release = 'v0.0.8'
+release = 'v1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

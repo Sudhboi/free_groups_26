@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "free_groups_26"
-version = "0.0.8"
+version = "1.0.0"
 dependencies = [
     "sortedcontainers >= 2.4.0",
     "matplotlib >= 3.10.8",
