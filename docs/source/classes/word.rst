@@ -11,4 +11,4 @@ This class is defined in ``free_groups_26.word``.
 
 .. autoclass:: Word
    :members:
-   :special-members: __eq__, __mul__, __pow__, __repr__
+   :special-members: __eq__, __mul__, __pow__, __repr__, __len__

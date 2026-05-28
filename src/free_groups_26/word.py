@@ -160,6 +160,9 @@ class Word:
         return hash(self.word)
 
     def __len__(self) -> int:
+        """
+        Returns the length of the word, not the number of letters.
+        """
         return self.length
 
     def infer_free_group(self) -> FreeGroup:

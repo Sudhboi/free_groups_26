@@ -7,7 +7,10 @@ from .word import Word
 from .whitehead_automorphism import generate_whitehead_automorphism_t2
 from .whitehead_graph import WhiteheadGraph, generate_whg
 
-def minimize_whitehead_once(word : Word,/,  fg : FreeGroup | None = None, log : list[str] | None = None) -> Word | None:
+
+def minimize_whitehead_once(
+    word: Word, /, fg: FreeGroup | None = None, log: list[str] | None = None
+) -> Word | None:
     """
     Performs Whitehead Minimization once.
 
@@ -30,15 +33,17 @@ def minimize_whitehead_once(word : Word,/,  fg : FreeGroup | None = None, log : 
     ["(SortedDict({'b': ba, 'c': a⁻¹ca}), a, {a, c, b, c⁻¹}, a⁻¹c⁻³b⁻¹a²)", "(SortedDict({'b': ab}), a⁻¹, {b⁻¹, a⁻¹}, c⁻³b⁻¹a)"]
 
     """
-    graph : WhiteheadGraph = generate_whg(word)
+    graph: WhiteheadGraph = generate_whg(word)
     if fg is None:
         fg = word.infer_free_group()
 
     for letter in fg.alphabet:
         try:
-            value, partitions = minimum_cut(graph, letter, letter.inv(), capacity="weight", flow_func=edmonds_karp)
-            partitions : tuple[set[Letter], set[Letter]]
-            value : int
+            value, partitions = minimum_cut(
+                graph, letter, letter.inv(), capacity="weight", flow_func=edmonds_karp
+            )
+            partitions: tuple[set[Letter], set[Letter]]
+            value: int
         except NetworkXError:
             continue
         if value < graph.degree(letter, weight="weight"):
@@ -53,9 +58,12 @@ def minimize_whitehead_once(word : Word,/,  fg : FreeGroup | None = None, log : 
             log.append("Minimal")
         return None
 
-def minimize_whitehead(word : Word, /, fg : FreeGroup | None = None, log : list[str] | None = None) -> Word:
+
+def minimize_whitehead(
+    word: Word, /, fg: FreeGroup | None = None, log: list[str] | None = None
+) -> Word:
     """
-    Whitehead Minimizes a word. 
+    Whitehead Minimizes a word.
 
     :param word: The word to be minimized.
     :param fg: The optional free group. If not passed, it is inferred from the word.
@@ -72,7 +80,7 @@ def minimize_whitehead(word : Word, /, fg : FreeGroup | None = None, log : list[
     fg = fg if fg is not None else word.infer_free_group()
     new_word = word
     while True:
-        minimized = minimize_whitehead_once(new_word,fg=fg, log=log)
+        minimized = minimize_whitehead_once(new_word, fg=fg, log=log)
         if log is not None:
             log.append(str(minimized))
         if minimized is None:

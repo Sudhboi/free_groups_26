@@ -1,10 +1,12 @@
 from collections.abc import Iterable
-from .letter import Letter, Symbol
-from .word import Word
-from .free_group import FreeGroup
-from .morphism import Morphism
 from itertools import chain, combinations
+
 from sortedcontainers import SortedDict, SortedSet
+
+from .free_group import FreeGroup
+from .letter import Letter, Symbol
+from .morphism import Morphism
+from .word import Word
 
 
 def _powerset(iterable):

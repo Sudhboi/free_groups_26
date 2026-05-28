@@ -32,12 +32,11 @@
         # Testing
         pytest
         jupyter
-        jupyterlab-vim
-        jupyterlab-lsp
+        jupyter-client
       ]
     ))
-    python3
     black
+    python3
     basedpyright
   ];
 
@@ -87,7 +86,9 @@
     cd -
   '';
   # https://devenv.sh/basics/
-  enterShell = "";
+  enterShell = ''
+    export PYTHONPATH="$DEVENV_ROOT/src/:$PYTHONPATH"
+  '';
 
   # https://devenv.sh/tasks/
   # tasks = {
