@@ -9,5 +9,6 @@
    .. autosummary::
    
       generate_all_t2_whitehead_automorphisms
+      generate_t2_wh_aut_lazy
       generate_whitehead_automorphism_t2
    

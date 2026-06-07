@@ -212,6 +212,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html">Whitehead Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bruteforce_orbit.html">Bruteforce Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -266,6 +267,31 @@
 <h1>Word Functions<a class="headerlink" href="#word-functions" title="Link to this heading">¶</a></h1>
 <p>These functions are defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.word</span></code>.</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.rd">
+<span class="sig-name descname"><span class="pre">rd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.rd" title="Link to this definition">¶</a></dt>
+<dd><p>Parses a word from a string. Guesses the correct function to use from <a class="reference internal" href="#free_groups_26.word_from_str_alphabet" title="free_groups_26.word_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a> and <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a> based on whether there is a
+caret <code class="docutils literal notranslate"><span class="pre">^</span></code> in the input. Recommended in most cases.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.generate_random_word">
+<span class="sig-name descname"><span class="pre">generate_random_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.free_group.FreeGroup"><span class="pre">FreeGroup</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.generate_random_word" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a cyclically reduced pseudo-random word from the given free group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> (<a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.FreeGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">FreeGroup</span></code></a>) – The free group of the generated word.</p></li>
+<li><p><strong>length</strong> (<em>int</em>) – The length of the generated word will be roughly around <code class="docutils literal notranslate"><span class="pre">length</span></code> <span class="math notranslate nohighlight">\(\pm\)</span> <code class="docutils literal notranslate"><span class="pre">variation</span></code>.</p></li>
+<li><p><strong>variation</strong> (<em>int</em>) – The absolute value of the highest power of a letter in the free group. For example, if <code class="docutils literal notranslate"><span class="pre">variation</span> <span class="pre">=</span> <span class="pre">4</span></code>, the exponents of
+the letters in the word are guaranteed to be between 4 and -4.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<section id="parsing-functions">
+<h2>Parsing Functions<a class="headerlink" href="#parsing-functions" title="Link to this heading">¶</a></h2>
+<dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.word_from_str">
 <span class="sig-name descname"><span class="pre">word_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.word_from_str" title="Link to this definition">¶</a></dt>
 <dd><p>Generates a word from a string of the format <code class="docutils literal notranslate"><span class="pre">&quot;{sym}^{exp}</span> <span class="pre">{letter}</span> <span class="pre">...</span></code>. This is consistent with <a class="reference internal" href="letter.html#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.
@@ -275,12 +301,16 @@ Use of <a class="reference internal" href="#free_groups_26.wfs" title="free_grou
 <dd class="field-odd"><p><strong>raw</strong> (<em>str</em>) – The string to be parsed.</p>
 </dd>
 </dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word_from_str</span><span class="p">(</span><span class="s2">&quot;a^2 b^3&quot;</span><span class="p">)</span>
+<span class="go">a²b³</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.wfs">
 <span class="sig-name descname"><span class="pre">wfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfs" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>.</p>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str" title="free_groups_26.word_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str()</span></code></a>. (Use <a class="reference internal" href="#free_groups_26.rd" title="free_groups_26.rd"><code class="xref py py-func docutils literal notranslate"><span class="pre">rd()</span></code></a> instead)</p>
 </dd></dl>
 
 <dl class="py function">
@@ -309,25 +339,10 @@ Use of <a class="reference internal" href="#free_groups_26.wfsa" title="free_gro
 <dl class="py function">
 <dt class="sig sig-object py" id="free_groups_26.wfsa">
 <span class="sig-name descname"><span class="pre">wfsa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.wfsa" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str_alphabet" title="free_groups_26.word_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a>.</p>
+<dd><p>Alias for <a class="reference internal" href="#free_groups_26.word_from_str_alphabet" title="free_groups_26.word_from_str_alphabet"><code class="xref py py-func docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a>.  (Use <a class="reference internal" href="#free_groups_26.rd" title="free_groups_26.rd"><code class="xref py py-func docutils literal notranslate"><span class="pre">rd()</span></code></a> instead)</p>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="free_groups_26.generate_random_word">
-<span class="sig-name descname"><span class="pre">generate_random_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.free_group.FreeGroup"><span class="pre">FreeGroup</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.generate_random_word" title="Link to this definition">¶</a></dt>
-<dd><p>Generates a cyclically reduced pseudo-random word from the given free group.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>group</strong> (<a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.FreeGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">FreeGroup</span></code></a>) – The free group of the generated word.</p></li>
-<li><p><strong>length</strong> (<em>int</em>) – The length of the generated word will be roughly around <code class="docutils literal notranslate"><span class="pre">length</span></code> <span class="math notranslate nohighlight">\(\pm\)</span> <code class="docutils literal notranslate"><span class="pre">variation</span></code>.</p></li>
-<li><p><strong>variation</strong> (<em>int</em>) – The absolute value of the highest power of a letter in the free group. For example, if <code class="docutils literal notranslate"><span class="pre">variation</span> <span class="pre">=</span> <span class="pre">4</span></code>, the exponents of
-the letters in the word are guaranteed to be between 4 and -4.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
+</section>
 </section>
 
         </article>
@@ -386,11 +401,15 @@ the letters in the word are guaranteed to be between 4 and -4.</p></li>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Word Functions</a><ul>
+<li><a class="reference internal" href="#free_groups_26.rd"><code class="docutils literal notranslate"><span class="pre">rd()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.generate_random_word"><code class="docutils literal notranslate"><span class="pre">generate_random_word()</span></code></a></li>
+<li><a class="reference internal" href="#parsing-functions">Parsing Functions</a><ul>
 <li><a class="reference internal" href="#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.generate_random_word"><code class="docutils literal notranslate"><span class="pre">generate_random_word()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

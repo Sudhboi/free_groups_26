@@ -8,6 +8,7 @@
 
    .. autosummary::
    
+      is_minimal
       minimize_whitehead
       minimize_whitehead_once
    

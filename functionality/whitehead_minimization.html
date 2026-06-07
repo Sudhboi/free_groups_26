@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="API" href="../api.html"><link rel="prev" title="Whitehead Graph Functions" href="whitehead_graph.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Bruteforce Minimization Functions" href="bruteforce_orbit.html"><link rel="prev" title="Whitehead Graph Functions" href="whitehead_graph.html">
         <link rel="prefetch" href="../_static/logo.svg" as="image">
 
     <link rel="shortcut icon" href="../_static/logo.svg"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
@@ -212,6 +212,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph Functions</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Whitehead Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bruteforce_orbit.html">Bruteforce Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -313,6 +314,16 @@ automorphism with <a class="reference internal" href="whitehead_automorphism.htm
 </div>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="free_groups_26.is_minimal">
+<span class="sig-name descname"><span class="pre">is_minimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/free_group.html#free_groups_26.FreeGroup" title="free_groups_26.free_group.FreeGroup"><span class="pre">FreeGroup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.is_minimal" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether the word is already whitehead minimal.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -320,12 +331,12 @@ automorphism with <a class="reference internal" href="whitehead_automorphism.htm
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../api.html">
+          <a class="next-page" href="bruteforce_orbit.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">API</div>
+                <div class="title">Bruteforce Minimization Functions</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -373,6 +384,7 @@ automorphism with <a class="reference internal" href="whitehead_automorphism.htm
 <li><a class="reference internal" href="#">Whitehead Minimization Functions</a><ul>
 <li><a class="reference internal" href="#free_groups_26.minimize_whitehead_once"><code class="docutils literal notranslate"><span class="pre">minimize_whitehead_once()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.minimize_whitehead"><code class="docutils literal notranslate"><span class="pre">minimize_whitehead()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.is_minimal"><code class="docutils literal notranslate"><span class="pre">is_minimal()</span></code></a></li>
 </ul>
 </li>
 </ul>

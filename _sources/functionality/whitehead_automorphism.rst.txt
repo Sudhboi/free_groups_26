@@ -12,3 +12,5 @@ These functions are defined in ``free_groups_26.whitehead_automorphism``.
 .. autofunction:: generate_whitehead_automorphism_t2
 
 .. autofunction:: generate_all_t2_whitehead_automorphisms
+
+.. autofunction:: generate_t2_wh_aut_lazy

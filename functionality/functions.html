@@ -212,6 +212,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_graph.html">Whitehead Graph Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html">Whitehead Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bruteforce_orbit.html">Bruteforce Minimization Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -278,20 +279,26 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="word.html">Word Functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.rd"><code class="docutils literal notranslate"><span class="pre">rd()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="word.html#free_groups_26.generate_random_word"><code class="docutils literal notranslate"><span class="pre">generate_random_word()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word.html#parsing-functions">Parsing Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.word_from_str"><code class="docutils literal notranslate"><span class="pre">word_from_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.wfs"><code class="docutils literal notranslate"><span class="pre">wfs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.word_from_str_alphabet"><code class="docutils literal notranslate"><span class="pre">word_from_str_alphabet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="word.html#free_groups_26.wfsa"><code class="docutils literal notranslate"><span class="pre">wfsa()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="whitehead_automorphism.html">Whitehead Automorphism Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_whitehead_automorphism_t2"><code class="docutils literal notranslate"><span class="pre">generate_whitehead_automorphism_t2()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_all_t2_whitehead_automorphisms"><code class="docutils literal notranslate"><span class="pre">generate_all_t2_whitehead_automorphisms()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_t2_wh_aut_lazy"><code class="docutils literal notranslate"><span class="pre">generate_t2_wh_aut_lazy()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bruteforce.html">Bruteforce Minimization Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html#free_groups_26.minimize_once_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_once_bruteforce()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="bruteforce.html#free_groups_26.minimize_once_bruteforce_lazy"><code class="docutils literal notranslate"><span class="pre">minimize_once_bruteforce_lazy()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="bruteforce.html#free_groups_26.minimize_bruteforce"><code class="docutils literal notranslate"><span class="pre">minimize_bruteforce()</span></code></a></li>
 </ul>
 </li>
@@ -304,6 +311,11 @@
 <li class="toctree-l1"><a class="reference internal" href="whitehead_minimization.html">Whitehead Minimization Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html#free_groups_26.minimize_whitehead_once"><code class="docutils literal notranslate"><span class="pre">minimize_whitehead_once()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html#free_groups_26.minimize_whitehead"><code class="docutils literal notranslate"><span class="pre">minimize_whitehead()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="whitehead_minimization.html#free_groups_26.is_minimal"><code class="docutils literal notranslate"><span class="pre">is_minimal()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bruteforce_orbit.html">Bruteforce Minimization Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bruteforce_orbit.html#free_groups_26.find_automorphic_orbit"><code class="docutils literal notranslate"><span class="pre">find_automorphic_orbit()</span></code></a></li>
 </ul>
 </li>
 </ul>
