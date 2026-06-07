@@ -11,4 +11,6 @@ These functions are defined in ``free_groups_26.minimize_bruteforce``.
 
 .. autofunction:: minimize_once_bruteforce
 
+.. autofunction:: minimize_once_bruteforce_lazy
+
 .. autofunction:: minimize_bruteforce

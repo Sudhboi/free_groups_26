@@ -10,3 +10,4 @@ Functions
    bruteforce
    whitehead_graph
    whitehead_minimization
+   bruteforce_orbit

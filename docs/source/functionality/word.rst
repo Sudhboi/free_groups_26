@@ -9,6 +9,13 @@ Word Functions
 
 These functions are defined in ``free_groups_26.word``.
 
+.. autofunction:: rd
+
+.. autofunction:: generate_random_word
+
+Parsing Functions
+-----------------
+
 .. autofunction:: word_from_str
 
 .. autofunction:: wfs
@@ -17,5 +24,4 @@ These functions are defined in ``free_groups_26.word``.
 
 .. autofunction:: wfsa
 
-.. autofunction:: generate_random_word
 

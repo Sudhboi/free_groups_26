@@ -185,6 +185,12 @@ class Word:
         """
         return " ".join([letter.get_copyable() for letter in self.word])
 
+    def is_cyclically_reduced(self) -> bool:
+        """
+        :return: whether the word is cyclically reduced.
+        """
+        return self.word[0].sym != self.word[-1].sym
+
 
 def _reduce_word_helper(stack: list[Letter], letter: Letter) -> None:
     if letter.exp == 0:
@@ -208,13 +214,17 @@ def word_from_str(raw: str) -> Word:
     Use of :py:func:`wfs` is recommended.
 
     :param str raw: The string to be parsed.
+
+    >>> word_from_str("a^2 b^3")
+    a²b³
+
     """
     return Word([letter_from_str(i) for i in raw.split(" ")])
 
 
 wfs = word_from_str
 """
-Alias for :py:func:`word_from_str`.
+Alias for :py:func:`word_from_str`. (Use :py:func:`rd` instead)
 """
 
 
@@ -240,8 +250,19 @@ def word_from_str_alphabet(raw: str) -> Word:
 
 wfsa = word_from_str_alphabet
 """
-Alias for :py:func:`word_from_str_alphabet`.
+Alias for :py:func:`word_from_str_alphabet`.  (Use :py:func:`rd` instead)
 """
+
+
+def rd(inp: str) -> Word:
+    """
+    Parses a word from a string. Guesses the correct function to use from :py:func:`word_from_str_alphabet` and :py:func:`word_from_str` based on whether there is a
+    caret ``^`` in the input. Recommended in most cases.
+    """
+    if "^" in inp:
+        return wfs(inp)
+    else:
+        return wfsa(inp)
 
 
 def generate_random_word(group: FreeGroup, length: int, variation: int) -> Word:

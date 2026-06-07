@@ -32,6 +32,8 @@
         # Testing
         pytest
         jupyter
+        jupyterlab-vim
+        jupyterlab-lsp
         jupyter-client
       ]
     ))

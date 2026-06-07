@@ -1,5 +1,6 @@
-from collections.abc import Iterable
+from collections.abc import Iterable, Generator
 from itertools import chain, combinations
+from typing import Any
 
 from sortedcontainers import SortedDict, SortedSet
 
@@ -66,7 +67,26 @@ def generate_all_t2_whitehead_automorphisms(
     morphism_list: list[Morphism] = []
     for A in _powerset(L_n):
         for x in A:
+            if x.inv() in A:
+                continue
             phi = generate_whitehead_automorphism_t2(x, A)
             if phi.morphism_map != {}:
                 morphism_list.append(phi)
     return morphism_list
+
+
+def generate_t2_wh_aut_lazy(
+    inp: FreeGroup | set[Symbol],
+) -> Generator[Morphism, Any, None]:
+    """
+    Lazily generates all the Type 2 Whitehead Automorphisms for the given set of symbols / :py:class:`FreeGroup`.
+    Similar to :py:func:`generate_all_t2_whitehead_automorphisms`, but recommended for more efficient memory usage.
+    """
+    L_n = inp.alphabet if isinstance(inp, FreeGroup) else FreeGroup(inp).alphabet
+    for A in _powerset(L_n):
+        for x in A:
+            if x.inv() in A:
+                continue
+            phi = generate_whitehead_automorphism_t2(x, A)
+            if phi.morphism_map != {}:
+                yield phi

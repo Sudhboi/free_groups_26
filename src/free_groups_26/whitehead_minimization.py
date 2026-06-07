@@ -87,3 +87,10 @@ def minimize_whitehead(
             break
         new_word = minimized
     return new_word
+
+
+def is_minimal(word: Word, fg: FreeGroup | None = None) -> bool:
+    """
+    :return: Whether the word is already whitehead minimal.
+    """
+    return minimize_whitehead(word, fg=fg) == word
