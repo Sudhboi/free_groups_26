@@ -11,3 +11,4 @@ API
     free_groups_26.whitehead_automorphism
     free_groups_26.whitehead_graph
     free_groups_26.whitehead_minimization
+    free_groups_26.aut_orbit_bruteforce

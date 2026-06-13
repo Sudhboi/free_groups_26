@@ -3,8 +3,8 @@ import random
 from collections.abc import Iterable
 from typing import override
 from .letter import Letter, Exponent, Symbol, letter_from_str, letter_from_str_alphabet
-from .free_group import FreeGroup
-from sortedcontainers import SortedSet
+from .free_group import FreeGroup, get_free_group
+from sortedcontainers import SortedSet, SortedList
 
 
 class MutableWord:
@@ -54,9 +54,23 @@ class Word:
         addedWord.word.extend(other.word)
         return addedWord.immutable()
 
-    def __iter__(self) -> Iterable[Letter]:
-        for i in self.word:
-            yield i
+    def __getitem__(self, index: int) -> Letter:
+        """
+        Indexing a word returns the letter at the position of the index.
+
+        >>> w = rd("a^3 b^2")
+        >>> w[0]
+        a³
+
+        .. note::
+
+            Added in v1.1.2
+
+        """
+        if index > len(self.word):
+            raise IndexError()
+        else:
+            return self.word[index]
 
     def __mul__(self, other: object) -> Word:
         """
@@ -290,3 +304,13 @@ def generate_random_word(group: FreeGroup, length: int, variation: int) -> Word:
         count += abs(expo)
     _reduce_cyclic(newWord.word)
     return newWord.immutable()
+
+
+def type_1_minimize(word: Word) -> Word:
+    canonical_free_group = get_free_group(word.infer_free_group().rank)
+    generator = iter(canonical_free_group.alphabet)
+    try:
+        while True:
+            print(next(generator))
+    except StopIteration:
+        return word

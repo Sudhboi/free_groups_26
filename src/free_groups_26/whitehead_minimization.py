@@ -3,7 +3,7 @@ from networkx.algorithms.flow import edmonds_karp
 
 from .free_group import FreeGroup
 from .letter import Letter
-from .word import Word
+from .word import Word, _reduce_cyclic
 from .whitehead_automorphism import generate_whitehead_automorphism_t2
 from .whitehead_graph import WhiteheadGraph, generate_whg
 
@@ -53,6 +53,10 @@ def minimize_whitehead_once(
                 log.append(str((phi.morphism_map, letter, partitions[0], new_word)))
             if new_word.length < word.length:
                 return new_word
+            else:
+                new_word = new_word.reduced(cyclic=True)
+                if new_word.length < word.length:
+                    return new_word
     else:
         if log is not None:
             log.append("Minimal")
