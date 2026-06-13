@@ -28,7 +28,7 @@ class Morphism:
         else:
             return self.morphism_map == value.morphism_map
 
-    def map(self, word: Word) -> Word:
+    def map(self, word: Word, reduce_cyclic: bool = False) -> Word:
         """
         Applies the morphism to a given word. If a symbol in the word has a map in :py:attr:`morphism_map`, then the corresponding mapping takes place, otherwise, the symbol is mapped to itself.
 
@@ -45,9 +45,9 @@ class Morphism:
                 newWord.word.append(letter)
             else:
                 newWord.word.extend((self.morphism_map[letter.sym] ** letter.exp).word)
-        return newWord.immutable().reduced()
+        return newWord.immutable().reduced(reduce_cyclic)
 
-    def __call__(self, word : Word, *args: Any, **kwds: Any) -> Word:
+    def __call__(self, word: Word, *args: Any, **kwds: Any) -> Word:
         """
         Morphisms can be applied to words by directly calling them. (Aliased to :py:meth:`map`.)
 

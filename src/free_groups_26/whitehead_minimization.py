@@ -48,7 +48,7 @@ def minimize_whitehead_once(
             continue
         if value < graph.degree(letter, weight="weight"):
             phi = generate_whitehead_automorphism_t2(letter, partitions[0])
-            new_word = phi(word)
+            new_word = phi.map(word, True)
             if log is not None:
                 log.append(str((phi.morphism_map, letter, partitions[0], new_word)))
             if new_word.length < word.length:
