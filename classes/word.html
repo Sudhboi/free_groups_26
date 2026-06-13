@@ -212,7 +212,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce.html">Bruteforce Minimization Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_graph.html">Whitehead Graph Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../functionality/whitehead_minimization.html">Whitehead Minimization Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce_orbit.html">Bruteforce Minimization Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../functionality/bruteforce_orbit.html">Bruteforce Orbit Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -223,6 +223,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_automorphism.html">free_groups_26.whitehead_automorphism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_graph.html">free_groups_26.whitehead_graph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.whitehead_minimization.html">free_groups_26.whitehead_minimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/free_groups_26.aut_orbit_bruteforce.html">free_groups_26.aut_orbit_bruteforce</a></li>
 </ul>
 </li>
 </ul>
@@ -301,6 +302,21 @@
 <dt class="sig sig-object py" id="free_groups_26.Word.concat">
 <span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></span><a class="headerlink" href="#free_groups_26.Word.concat" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the result of concatenating the given word with <code class="docutils literal notranslate"><span class="pre">self</span></code>. The result is <strong>not</strong> reduced.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="free_groups_26.Word.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="letter.html#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.Word.__getitem__" title="Link to this definition">¶</a></dt>
+<dd><p>Indexing a word returns the letter at the position of the index.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">rd</span><span class="p">(</span><span class="s2">&quot;a^3 b^2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">a³</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Added in v1.1.2</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -470,6 +486,7 @@ Right multiplication is also implemented.</p>
 <li><a class="reference internal" href="#free_groups_26.Word.length"><code class="docutils literal notranslate"><span class="pre">Word.length</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.reduced"><code class="docutils literal notranslate"><span class="pre">Word.reduced()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.concat"><code class="docutils literal notranslate"><span class="pre">Word.concat()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Word.__getitem__"><code class="docutils literal notranslate"><span class="pre">Word.__getitem__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.__mul__"><code class="docutils literal notranslate"><span class="pre">Word.__mul__()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.inv"><code class="docutils literal notranslate"><span class="pre">Word.inv()</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Word.__pow__"><code class="docutils literal notranslate"><span class="pre">Word.__pow__()</span></code></a></li>

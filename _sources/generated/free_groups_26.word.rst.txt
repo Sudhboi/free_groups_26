@@ -17,6 +17,7 @@
    
       generate_random_word
       rd
+      type_1_minimize
       wfs
       wfsa
       word_from_str

@@ -1,4 +1,4 @@
-Bruteforce Minimization Functions
+Bruteforce Orbit Functions
 =================================
 
 .. py:currentmodule:: free_groups_26
