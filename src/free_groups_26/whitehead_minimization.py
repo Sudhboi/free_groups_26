@@ -1,9 +1,11 @@
 from networkx import minimum_cut, NetworkXError
 from networkx.algorithms.flow import edmonds_karp
+from sortedcontainers import SortedDict
 
-from .free_group import FreeGroup
-from .letter import Letter
-from .word import Word, _reduce_cyclic
+from .free_group import FreeGroup, get_free_group
+from .letter import Letter, Symbol
+from .morphism import Morphism
+from .word import Word
 from .whitehead_automorphism import generate_whitehead_automorphism_t2
 from .whitehead_graph import WhiteheadGraph, generate_whg
 
@@ -94,3 +96,27 @@ def is_minimal(word: Word, fg: FreeGroup | None = None) -> bool:
     :return: Whether the word is already whitehead minimal.
     """
     return minimize_whitehead(word, fg=fg) == word
+
+
+def type_1_minimize(word: Word) -> tuple[Word, Morphism]:
+    """
+    Finds a Type 1 Whitehead Automorphism that makes the word lexicographically minimal.
+
+    >>> w = rd("k m^-1 y^-2 m y")
+    >>> nw, m = type_1_minimize(w)
+    >>> nw, m.morphism_map
+    (abc²b⁻¹c⁻¹, SortedDict({'k': a, 'm': b⁻¹, 'y': c⁻¹}))
+
+    """
+    canonical_free_group = get_free_group(word.infer_free_group().rank)
+    generator = iter(canonical_free_group.basis)
+    word_iter = iter(word)
+    phi_map: dict[Symbol, Word] = SortedDict()
+    while len(phi_map) < canonical_free_group.rank:
+        curr_letter = next(word_iter)
+        if curr_letter.sym not in phi_map:
+            phi_map[curr_letter.sym] = Word(
+                (Letter(next(generator), curr_letter.get_base().exp),)
+            )
+    phi = Morphism(phi_map)
+    return (phi(word), phi)

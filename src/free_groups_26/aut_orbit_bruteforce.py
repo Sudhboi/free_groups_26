@@ -5,7 +5,7 @@ from free_groups_26.whitehead_minimization import is_minimal
 from free_groups_26.word import Word
 
 
-def find_automorphic_orbit(word: Word) -> list[tuple[Morphism, Word]]:
+def find_minimal_automorphic_orbit(word: Word) -> list[tuple[Morphism, Word]]:
     aut_list: list[tuple[Morphism, Word]] = []
     if not is_minimal(word):
         warn("Finding automorphic orbit of non-minimal word.")

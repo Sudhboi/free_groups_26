@@ -8,5 +8,5 @@
 
    .. autosummary::
    
-      find_automorphic_orbit
+      find_minimal_automorphic_orbit
    

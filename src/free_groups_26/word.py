@@ -2,9 +2,10 @@ from __future__ import annotations
 import random
 from collections.abc import Iterable
 from typing import override
+
 from .letter import Letter, Exponent, Symbol, letter_from_str, letter_from_str_alphabet
 from .free_group import FreeGroup, get_free_group
-from sortedcontainers import SortedSet, SortedList
+from sortedcontainers import SortedDict, SortedSet, SortedList
 
 
 class MutableWord:
@@ -304,13 +305,3 @@ def generate_random_word(group: FreeGroup, length: int, variation: int) -> Word:
         count += abs(expo)
     _reduce_cyclic(newWord.word)
     return newWord.immutable()
-
-
-def type_1_minimize(word: Word) -> Word:
-    canonical_free_group = get_free_group(word.infer_free_group().rank)
-    generator = iter(canonical_free_group.alphabet)
-    try:
-        while True:
-            print(next(generator))
-    except StopIteration:
-        return word

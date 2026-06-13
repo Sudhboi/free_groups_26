@@ -38,5 +38,7 @@ from .whitehead_minimization import (
     minimize_whitehead_once,
     minimize_whitehead,
     is_minimal,
+    type_1_minimize,
 )
-from .aut_orbit_bruteforce import find_automorphic_orbit
+from .aut_orbit_bruteforce import find_minimal_automorphic_orbit
+from .log import Log, LogItem, new_log, display_log

@@ -11,4 +11,5 @@
       is_minimal
       minimize_whitehead
       minimize_whitehead_once
+      type_1_minimize
    

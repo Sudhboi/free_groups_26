@@ -14,3 +14,5 @@ These functions are defined in ``free_groups_26.whitehead_minimization``.
 .. autofunction:: minimize_whitehead
 
 .. autofunction:: is_minimal
+
+.. autofunction:: type_1_minimize
