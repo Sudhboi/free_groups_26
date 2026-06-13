@@ -53,10 +53,6 @@ def minimize_whitehead_once(
                 log.append(str((phi.morphism_map, letter, partitions[0], new_word)))
             if new_word.length < word.length:
                 return new_word
-            else:
-                new_word = new_word.reduced(cyclic=True)
-                if new_word.length < word.length:
-                    return new_word
     else:
         if log is not None:
             log.append("Minimal")
