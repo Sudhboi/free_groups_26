@@ -199,6 +199,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classes/free_group.html">FreeGroup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes/word.html">Word</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes/morphism.html">Morphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes/log.html">Log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classes/whitehead_graph.html">Whitehead Graph</a></li>
 </ul>
 </li>
@@ -259,7 +260,7 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#W"><strong>W</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#W"><strong>W</strong></a></div>
 </section>
 <section id="_" class="genindex-section">
   <h2>_</h2>
@@ -329,6 +330,10 @@
   <h2>D</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="classes/log.html#free_groups_26.display_log">display_log() (in module free_groups_26)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="functionality/whitehead_graph.html#free_groups_26.draw_graph">draw_graph() (in module free_groups_26)</a>
 </li>
     </ul></td>
@@ -353,7 +358,7 @@
   <h2>F</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="functionality/bruteforce_orbit.html#free_groups_26.find_automorphic_orbit">find_automorphic_orbit() (in module free_groups_26)</a>
+        <li><a href="functionality/bruteforce_orbit.html#free_groups_26.find_minimal_automorphic_orbit">find_minimal_automorphic_orbit() (in module free_groups_26)</a>
 </li>
         <li>
     free_groups_26.aut_orbit_bruteforce
@@ -475,13 +480,17 @@
 </li>
         <li><a href="functionality/letter.html#free_groups_26.letter_from_str">letter_from_str() (in module free_groups_26)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="functionality/letter.html#free_groups_26.letter_from_str_alphabet">letter_from_str_alphabet() (in module free_groups_26)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="functionality/letter.html#free_groups_26.lfs">lfs() (in module free_groups_26)</a>
 </li>
         <li><a href="functionality/letter.html#free_groups_26.lfsa">lfsa() (in module free_groups_26)</a>
+</li>
+        <li><a href="classes/log.html#free_groups_26.Log">Log (in module free_groups_26)</a>
+</li>
+        <li><a href="classes/log.html#free_groups_26.LogItem">LogItem (class in free_groups_26)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -528,7 +537,19 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="classes/morphism.html#free_groups_26.Morphism">Morphism (class in free_groups_26)</a>
 </li>
+        <li><a href="classes/log.html#free_groups_26.LogItem.morphism">morphism (LogItem attribute)</a>
+</li>
         <li><a href="classes/morphism.html#free_groups_26.Morphism.morphism_map">morphism_map (Morphism attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="classes/log.html#free_groups_26.new_log">new_log() (in module free_groups_26)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -566,6 +587,16 @@
   </tr></table>
 </section>
 
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="functionality/whitehead_minimization.html#free_groups_26.type_1_minimize">type_1_minimize() (in module free_groups_26)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
 <section id="W" class="genindex-section">
   <h2>W</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
@@ -576,12 +607,16 @@
 </li>
         <li><a href="classes/whitehead_graph.html#free_groups_26.WhiteheadGraph">WhiteheadGraph (in module free_groups_26)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="classes/word.html#free_groups_26.Word">Word (class in free_groups_26)</a>
 </li>
-        <li><a href="classes/word.html#free_groups_26.Word.word">word (Word attribute)</a>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="classes/log.html#free_groups_26.LogItem.word">word (LogItem attribute)</a>
+
+        <ul>
+          <li><a href="classes/word.html#free_groups_26.Word.word">(Word attribute)</a>
 </li>
+        </ul></li>
         <li><a href="functionality/word.html#free_groups_26.word_from_str">word_from_str() (in module free_groups_26)</a>
 </li>
         <li><a href="functionality/word.html#free_groups_26.word_from_str_alphabet">word_from_str_alphabet() (in module free_groups_26)</a>

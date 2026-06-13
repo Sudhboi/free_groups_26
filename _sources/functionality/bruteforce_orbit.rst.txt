@@ -9,4 +9,4 @@ Bruteforce Orbit Functions
 
 These functions are defined in ``free_groups_26.aut_orbit_bruteforce``.
 
-.. autofunction:: find_automorphic_orbit
+.. autofunction:: find_minimal_automorphic_orbit
