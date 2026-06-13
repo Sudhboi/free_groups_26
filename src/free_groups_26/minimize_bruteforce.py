@@ -1,4 +1,6 @@
 from collections.abc import Iterable
+
+from free_groups_26.log import Log, LogItem
 from .morphism import Morphism
 from .whitehead_automorphism import (
     generate_all_t2_whitehead_automorphisms,
@@ -8,14 +10,14 @@ from .word import Word
 
 
 def minimize_once_bruteforce(
-    word: Word, morphism_list: Iterable[Morphism], /, log: list[str] | None = None
+    word: Word, morphism_list: Iterable[Morphism], /, log: Log | None = None
 ) -> tuple[Word, bool]:
     """
     Minimizes a word once, if possible.
 
     :param word: The word to be minimized.
     :param morphism_list: The list of all morphisms to try while minimizing the word.
-    :param log: (*keyword argument only*) If there exists a morphism that reduces a word, its string and the new word is appended to the log, if passed.
+    :param log: (*keyword argument only*) Optional argument. The new word and the morphism used will be appended.
     :return: Returns a tuple of (:py:class:`Word`, ``bool``). The second element specifies whether the word was reduced.
 
     """
@@ -25,17 +27,15 @@ def minimize_once_bruteforce(
         new_word = morphism.map(word)
         if new_word.length < current_length:
             if has_log:
-                log.append(str((morphism.morphism_map, new_word)))
+                log.append(LogItem(new_word, morphism))
             return (new_word, True)
-    if has_log:
-        log.append("False")
     return (word, False)
 
 
 def minimize_once_bruteforce_lazy(
     word: Word,
     morphism_list: Iterable[Morphism] | None = None,
-    log: list[str] | None = None,
+    log: Log | None = None,
 ) -> tuple[Word, bool]:
     """
     Similar to :py:func:`minimize_once_bruteforce`, but lazy evaluated. This is almost always recommended.
@@ -47,10 +47,8 @@ def minimize_once_bruteforce_lazy(
         new_word = morphism(word)
         if new_word.length < word.length:
             if has_log:
-                log.append(str((morphism.morphism_map, new_word)))
+                log.append(LogItem(new_word, morphism))
             return (new_word, True)
-    if has_log:
-        log.append("False")
     return (word, False)
 
 
@@ -59,23 +57,22 @@ def minimize_bruteforce(
     lazy: bool = True,
     morphism_list: Iterable[Morphism] | None = None,
     /,
-    log: list[str] | None = None,
+    log: Log | None = None,
 ) -> Word:
     """
     Returns the minimized form of the word, which might be the same word.
 
     :param lazy: (Recommended) Enables lazy evaluation of the automorphisms. If this is on, passing a ``morphism_list`` has no effect.
     :param morphism_list: If an iterable of morphisms is not provided, :py:func:`generate_all_t2_whitehead_automorphisms` is used to generate all possible Whitehead automorphisms for the given word. It is recommended that the list is generated and passed manually if working with multiple words from the same free group.
-    :param log: *(keyword argument only)* All mimization operations are appended as strings to the log, if passed.
+    :param log: *(keyword argument only)* All mimization operations are appended to the log, if passed.
 
-    >>> log = []
-    >>> print(minimize_bruteforce(wfs("a b^2 c"), log=log))
+    >>> log = new_log()
+    >>> minimize_bruteforce(rd("a b^2 c"), log=log)
     c
-    >>> _ = [print(i) for i in log]
-    (SortedDict({'a': ab⁻¹}), abc)
-    (SortedDict({'b': a⁻¹b}), bc)
-    (SortedDict({'c': b⁻¹c}), c)
-    False
+    >>> display_log(log)
+    abc : SortedDict({'a': ab⁻¹})
+    bc : SortedDict({'b': a⁻¹b})
+    c : SortedDict({'c': b⁻¹c})
 
     """
     if morphism_list is None and not lazy:
