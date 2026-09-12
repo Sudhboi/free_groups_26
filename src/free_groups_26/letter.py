@@ -10,11 +10,7 @@ from functools import total_ordering
 
 __all__ = [
     "Letter",
-    "Symbol",
-    "Exponent",
     "letter_from_str",
-    "letter_from_str_a",
-    "letter_from_str_b",
 ]
 
 type Symbol = str
@@ -123,6 +119,8 @@ def letter_from_str_a(char: str) -> Letter:
     a⁻¹
 
     """
+    if len(char) > 1:
+        raise ValueError("Expected single character. Found {char}")
     return Letter(
         char.lower(),
         1 if char.islower() else -1,
