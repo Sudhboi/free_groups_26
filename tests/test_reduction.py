@@ -1,4 +1,4 @@
-from src.free_groups_26 import *
+from free_groups_26 import *
 
 
 def test_conversion():
