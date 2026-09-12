@@ -288,10 +288,10 @@
 automorphism with <a class="reference internal" href="whitehead_automorphism.html#free_groups_26.generate_whitehead_automorphism_t2" title="free_groups_26.generate_whitehead_automorphism_t2"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_whitehead_automorphism_t2()</span></code></a>. If the length of the word is less than the given word (not guaranteed by a min cut), return it, otherwise continue iterating.</p>
 <p>The min cut is computed using Edmonds Karp.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span> <span class="o">=</span> <span class="n">new_log</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_whitehead_once</span><span class="p">(</span><span class="n">rd</span><span class="p">(</span><span class="s2">&quot;a b^2 c&quot;</span><span class="p">),</span> <span class="n">log</span><span class="o">=</span><span class="n">log</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_whitehead_once</span><span class="p">(</span><span class="n">rd</span><span class="p">(</span><span class="s2">"a b^2 c"</span><span class="p">),</span> <span class="n">log</span><span class="o">=</span><span class="n">log</span><span class="p">)</span>
 <span class="go">b²c</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">display_log</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
-<span class="go">b²c : SortedDict({&#39;b&#39;: a⁻¹ba, &#39;c&#39;: a⁻¹c})</span>
+<span class="go">b²c : SortedDict({'b': a⁻¹ba, 'c': a⁻¹c})</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -310,7 +310,7 @@ automorphism with <a class="reference internal" href="whitehead_automorphism.htm
 </dd>
 </dl>
 <p><strong>Current Implementation</strong>: Keep trying <a class="reference internal" href="#free_groups_26.minimize_whitehead_once" title="free_groups_26.minimize_whitehead_once"><code class="xref py py-func docutils literal notranslate"><span class="pre">minimize_whitehead_once()</span></code></a> on the word, reassigning the returns. If it returns a <code class="docutils literal notranslate"><span class="pre">None</span></code>, then this function returns the minimized word.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_whitehead</span><span class="p">(</span><span class="n">wfs</span><span class="p">(</span><span class="s2">&quot;c^-3 b^-1 a^2&quot;</span><span class="p">))</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">minimize_whitehead</span><span class="p">(</span><span class="n">wfs</span><span class="p">(</span><span class="s2">"c^-3 b^-1 a^2"</span><span class="p">))</span>
 <span class="go">c⁻¹</span>
 </pre></div>
 </div>
@@ -330,10 +330,10 @@ automorphism with <a class="reference internal" href="whitehead_automorphism.htm
 <dt class="sig sig-object py" id="free_groups_26.type_1_minimize">
 <span class="sig-name descname"><span class="pre">type_1_minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">word</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../classes/word.html#free_groups_26.Word" title="free_groups_26.word.Word"><span class="pre">Word</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../classes/morphism.html#free_groups_26.Morphism" title="free_groups_26.morphism.Morphism"><span class="pre">Morphism</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#free_groups_26.type_1_minimize" title="Link to this definition">¶</a></dt>
 <dd><p>Finds a Type 1 Whitehead Automorphism that makes the word lexicographically minimal.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">rd</span><span class="p">(</span><span class="s2">&quot;k m^-1 y^-2 m y&quot;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w</span> <span class="o">=</span> <span class="n">rd</span><span class="p">(</span><span class="s2">"k m^-1 y^-2 m y"</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nw</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">type_1_minimize</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nw</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">morphism_map</span>
-<span class="go">(abc²b⁻¹c⁻¹, SortedDict({&#39;k&#39;: a, &#39;m&#39;: b⁻¹, &#39;y&#39;: c⁻¹}))</span>
+<span class="go">(abc²b⁻¹c⁻¹, SortedDict({'k': a, 'm': b⁻¹, 'y': c⁻¹}))</span>
 </pre></div>
 </div>
 </dd></dl>
