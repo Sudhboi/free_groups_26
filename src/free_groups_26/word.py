@@ -3,7 +3,12 @@ import random
 from collections.abc import Iterable
 from typing import override
 
-from .letter import Letter, Exponent, Symbol, letter_from_str, letter_from_str_alphabet
+from .letter import (
+    Letter,
+    Exponent,
+    Symbol,
+    letter_from_str,
+)
 from .free_group import FreeGroup, get_free_group
 from sortedcontainers import SortedDict, SortedSet, SortedList
 
@@ -194,12 +199,6 @@ class Word:
                 basis.add(letter.sym)
         return FreeGroup(basis)
 
-    def get_copyable(self) -> str:
-        """
-        :return: A string that can be read by :py:func:`word_from_str`.
-        """
-        return " ".join([letter.get_copyable() for letter in self.word])
-
     def is_cyclically_reduced(self) -> bool:
         """
         :return: whether the word is cyclically reduced.
@@ -260,7 +259,7 @@ def word_from_str_alphabet(raw: str) -> Word:
     a⁻⁴b⁻⁴h⁻⁴m⁻³k²
 
     """
-    return Word(map(letter_from_str_alphabet, raw)).reduced()
+    return Word(map(letter_from_str, raw)).reduced()
 
 
 wfsa = word_from_str_alphabet
