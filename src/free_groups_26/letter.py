@@ -142,8 +142,8 @@ def letter_from_str_alphabet(char: str) -> Letter:
 
     """
     return Letter(
-        chr((ord(char) & 0b00001111) | 0b01100000),
-        1 if (0b00100000 & ord(char)) else -1,
+        char.lower(),
+        1 if char.islower() else -1,
     )
 
 

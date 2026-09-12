@@ -30,7 +30,7 @@ docs = [
     "sphinx"
 ]
 test = [
-      "pytest",
+    "pytest",
     "pytest-cov",
 ]
 
