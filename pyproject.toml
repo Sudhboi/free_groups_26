@@ -29,6 +29,10 @@ license-files = ["LICEN[CS]E*"]
 docs = [
     "sphinx"
 ]
+test = [
+      "pytest",
+    "pytest-cov",
+]
 
 [project.urls]
 Documentation = "https://www.sudhirkrisna.com/free_groups_26/"
