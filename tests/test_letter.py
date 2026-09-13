@@ -1,9 +1,12 @@
+import pytest
 from free_groups_26.letter import Letter, letter_from_str
 
 
 def test_from_str():
     assert letter_from_str("a") == Letter("a", 1)
     assert letter_from_str("A") == Letter("a", -1)
+    with pytest.raises(ValueError):
+        _ = letter_from_str("aa")
     assert letter_from_str("b^-32") == Letter("b", -32)
 
 

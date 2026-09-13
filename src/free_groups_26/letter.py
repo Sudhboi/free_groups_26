@@ -11,6 +11,8 @@ from functools import total_ordering
 __all__ = [
     "Letter",
     "letter_from_str",
+    "letter_from_str_a",
+    "letter_from_str_b",
 ]
 
 type Symbol = str
@@ -35,7 +37,7 @@ class Letter:
     >>> Letter("a", 1)
     a
     >>> Letter("x", 3)
-    x³
+    x^3
     """
 
     sym: Symbol  #:
@@ -97,6 +99,7 @@ class Letter:
 
 def letter_from_str_b(raw: str) -> Letter:
     """
+    Do not use unless you're sure what you're doing! Use :py:func:`letter_from_str` instead. \n
     Returns a letter from a string of the format ``{sym}^{exp}``.
 
     >>> letter_from_str_b("b^32")
@@ -111,12 +114,13 @@ def letter_from_str_b(raw: str) -> Letter:
 
 def letter_from_str_a(char: str) -> Letter:
     """
+    Do not use unless you're sure what you're doing! Use :py:func:`letter_from_str` instead. \n
     Another way to generate a letter from a string. This function works exclusively on the English Alphabet, where it considers uppercase letters the inverse of lowercase letters.
 
     >>> letter_from_str_a("a")
     a
     >>> letter_from_str_a("A")
-    a⁻¹
+    a^-1
 
     """
     if len(char) > 1:
@@ -132,11 +136,11 @@ def letter_from_str(char: str) -> Letter:
     Use of this function is always recommended. Intelligently chooses between the two types of conversion.
 
     >>> letter_from_str("b^32")
-    b³²
+    b^32
     >>> letter_from_str("a")
     a
     >>> letter_from_str("A")
-    a⁻¹
+    a^-1
 
     """
     return letter_from_str_b(char) if "^" in char else letter_from_str_a(char)
