@@ -1,11 +1,12 @@
+__version__ = "1.1.1"
+
 from .letter import (
     letter_from_str,
+    letter_from_str_b,
+    letter_from_str_a,
     Letter,
-    lfs,
     Symbol,
     Exponent,
-    letter_from_str_alphabet,
-    lfsa,
 )
 from .word import (
     word_from_str,
