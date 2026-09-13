@@ -1,7 +1,7 @@
 from typing import override, Any
 from sortedcontainers import SortedDict
-from .letter import Symbol
-from .word import Word, MutableWord
+from .letter import Letter, Symbol
+from .word import Word
 
 
 class Morphism:
@@ -39,13 +39,13 @@ class Morphism:
         ab⁻¹ab²
 
         """
-        newWord = MutableWord([])
+        newWord: list[Letter] = []
         for letter in word.word:
             if letter.sym not in self.morphism_map:
-                newWord.word.append(letter)
+                newWord.append(letter)
             else:
-                newWord.word.extend((self.morphism_map[letter.sym] ** letter.exp).word)
-        return newWord.immutable().reduced(reduce_cyclic)
+                newWord.extend((self.morphism_map[letter.sym] ** letter.exp).word)
+        return Word(newWord).reduced(reduce_cyclic)
 
     def __call__(self, word: Word, *args: Any, **kwds: Any) -> Word:
         """

@@ -49,9 +49,9 @@ class Word(Sequence[Letter]):
         """
         m_word: list[Letter] = []
         for letter in self.word:
-            _reduce_word_helper(m_word, letter)
+            reduce_word_helper(m_word, letter)
         if cyclic:
-            _reduce_cyclic(m_word)
+            reduce_cyclic(m_word)
         return Word(m_word)
 
     def __mul__(self, other: object) -> Word:
@@ -74,9 +74,9 @@ class Word(Sequence[Letter]):
         """
         Checks strict (unreduced) equality.
 
-        >>> read("aa").strict_equality(read("aa"))
+        >>> read("aa").strict_equals(read("aa"))
         True
-        >>> read("aabB").strict_equality(read("aa"))
+        >>> read("aabB").strict_equals(read("aa"))
         False
 
         """
@@ -121,7 +121,9 @@ class Word(Sequence[Letter]):
         """
         if self.length <= 1:
             return True
-        return self.word[0].sym != self.word[-1].sym
+        return (
+            self.strict_equals(self.reduced()) and self.word[0].sym != self.word[-1].sym
+        )
 
     def infer_free_group(self) -> FreeGroup:
         """
@@ -138,17 +140,17 @@ class Word(Sequence[Letter]):
         return FreeGroup(basis)
 
 
-def _reduce_word_helper(stack: list[Letter], letter: Letter) -> None:
+def reduce_word_helper(stack: list[Letter], letter: Letter) -> None:
     if letter.exp == 0:
         return
     elif len(stack) == 0:
         stack.append(letter)
     elif stack[-1].sym == letter.sym:
-        _reduce_word_helper(stack, Letter(letter.sym, stack.pop().exp + letter.exp))
+        reduce_word_helper(stack, Letter(letter.sym, stack.pop().exp + letter.exp))
     else:
         stack.append(letter)
 
 
-def _reduce_cyclic(stack: list[Letter]) -> None:
+def reduce_cyclic(stack: list[Letter]) -> None:
     while len(stack) > 1 and stack[0].sym == stack[-1].sym:
-        _reduce_word_helper(stack, stack.pop(0))
+        reduce_word_helper(stack, stack.pop(0))
