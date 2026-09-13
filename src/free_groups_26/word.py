@@ -1,6 +1,6 @@
 from __future__ import annotations
 import random
-from collections.abc import Iterable
+from collections.abc import Iterable, MutableSet
 from typing import override
 
 from .letter import (
@@ -35,7 +35,7 @@ class Word:
         """
         self.word = tuple(word)
         self.length = 0
-        for letter in word:
+        for letter in self.word:
             self.length += abs(letter.exp)
 
     def reduced(self, cyclic: bool = False) -> Word:
@@ -193,7 +193,7 @@ class Word:
         SortedSet(['a', 'b', 'k'])
 
         """
-        basis: set[Symbol] = SortedSet()
+        basis: MutableSet[Symbol] = SortedSet()
         for letter in self.word:
             if letter.sym not in basis:
                 basis.add(letter.sym)

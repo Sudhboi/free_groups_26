@@ -1,11 +1,13 @@
+from collections.abc import MutableSet
+
 from .letter import Symbol, Letter
 from sortedcontainers import SortedSet
 
 
 class FreeGroup:
 
-    basis: set[Symbol]  #: Implemented using a SortedSet from sortedcontainers.
-    alphabet: set[Letter]
+    basis: MutableSet[Symbol]  #: Implemented using a SortedSet from sortedcontainers.
+    alphabet: MutableSet[Letter]
     """
     Also implemented using a SortedSet. Represented by :math:`X^{\\pm}`.
 
@@ -13,7 +15,7 @@ class FreeGroup:
     """
     rank: int  #: Automatically inferred from :py:attr:`basis`.
 
-    def __init__(self, basis: set[Symbol]) -> None:
+    def __init__(self, basis: MutableSet[Symbol]) -> None:
         """
         This class represents a Free Group.
 
@@ -22,7 +24,7 @@ class FreeGroup:
         """
         self.basis = SortedSet(basis)
         self.rank = len(basis)
-        temp_alphabet: set[Letter] = SortedSet()
+        temp_alphabet: MutableSet[Letter] = SortedSet()
         for sym in basis:
             temp_alphabet.add(Letter(sym, 1))
             temp_alphabet.add(Letter(sym, -1))
@@ -41,7 +43,7 @@ def get_free_group(rank: int) -> FreeGroup:
 
     :param int rank: The rank of the free group.
     """
-    basisSet: set[Symbol] = SortedSet()
+    basisSet: MutableSet[Symbol] = SortedSet()
     for i in range(97, 97 + rank):
         basisSet.add(chr(i))
     return FreeGroup(basisSet)

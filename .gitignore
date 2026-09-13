@@ -24,3 +24,6 @@ temp
 
 # documentation
 docs/build
+
+# generated typings
+typings/sortedcontainers
