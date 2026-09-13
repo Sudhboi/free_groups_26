@@ -280,8 +280,8 @@
 <p>This class is defined in <code class="docutils literal notranslate"><span class="pre">free_groups_26.letter</span></code>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="free_groups_26.Letter">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Letter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Letter" title="Link to this definition">¶</a></dt>
-<dd><p>This class represents a letter.</p>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">Letter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sym</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Exponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#free_groups_26.Letter" title="Link to this definition">¶</a></dt>
+<dd><p>This class represents a letter. Implements a total ordering, <code class="docutils literal notranslate"><span class="pre">__eq__</span></code> and <code class="docutils literal notranslate"><span class="pre">__hash__</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Public access of both instance variables (<a class="reference internal" href="#free_groups_26.Letter.sym" title="free_groups_26.Letter.sym"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sym</span></code></a> and <a class="reference internal" href="#free_groups_26.Letter.exp" title="free_groups_26.Letter.exp"><code class="xref py py-attr docutils literal notranslate"><span class="pre">exp</span></code></a>) is encouraged.</p>
@@ -297,7 +297,7 @@
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="go">a</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="go">x³</span>
+<span class="go">x^3</span>
 </pre></div>
 </div>
 <dl class="py attribute">
@@ -311,47 +311,21 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="free_groups_26.Letter.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.__eq__" title="Link to this definition">¶</a></dt>
-<dd><p>Checks for equality between two letters. Two letters are equal <span class="math notranslate nohighlight">\(\iff\)</span> the symbol and the exponent are equal.
-Returns <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is not a <a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-type docutils literal notranslate"><span class="pre">Letter</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<code class="xref py py-type docutils literal notranslate"><span class="pre">object</span></code>) – The letter to compare against.</p>
-</dd>
-</dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">Letter</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Letter</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">Letter</span><span class="p">(</span><span class="s2">"b"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="go">False</span>
-</pre></div>
-</div>
+<dt class="sig sig-object py" id="free_groups_26.Letter.is_inverse">
+<span class="sig-name descname"><span class="pre">is_inverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.is_inverse" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the exponent is less than 0.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="free_groups_26.Letter.__lt__">
-<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#free_groups_26.Letter.__lt__" title="Link to this definition">¶</a></dt>
-<dd><p>Checks if <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">&lt;</span> <span class="pre">other</span></code>. The following ordering is followed:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[a &lt; a^2 &lt; \ldots &lt; a^{-2} &lt; a^{-1} &lt; b &lt; \ldots\]</div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<em>object</em>) – The object to compare against.</p>
-</dd>
-</dl>
-<p>Returns <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is not a <a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.Letter"><code class="xref py py-type docutils literal notranslate"><span class="pre">Letter</span></code></a>.</p>
+<dt class="sig sig-object py" id="free_groups_26.Letter.inv">
+<span class="sig-name descname"><span class="pre">inv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.Letter.inv" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the inverse.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="free_groups_26.Letter.get_copyable">
-<span class="sig-name descname"><span class="pre">get_copyable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#free_groups_26.Letter.get_copyable" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A string that can be read by <a class="reference internal" href="../functionality/letter.html#free_groups_26.letter_from_str" title="free_groups_26.letter_from_str"><code class="xref py py-func docutils literal notranslate"><span class="pre">letter_from_str()</span></code></a>.</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="free_groups_26.Letter.get_base">
+<span class="sig-name descname"><span class="pre">get_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#free_groups_26.Letter" title="free_groups_26.letter.Letter"><span class="pre">Letter</span></a></span></span><a class="headerlink" href="#free_groups_26.Letter.get_base" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the base of the letter, which is defined as <span class="math notranslate nohighlight">\(a^{\frac{b}{|b|}}\)</span> for <span class="math notranslate nohighlight">\(a^b\)</span>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -419,9 +393,9 @@ Returns <code class="docutils literal notranslate"><span class="pre">NotImplemen
 <li><a class="reference internal" href="#free_groups_26.Letter"><code class="docutils literal notranslate"><span class="pre">Letter</span></code></a><ul>
 <li><a class="reference internal" href="#free_groups_26.Letter.sym"><code class="docutils literal notranslate"><span class="pre">Letter.sym</span></code></a></li>
 <li><a class="reference internal" href="#free_groups_26.Letter.exp"><code class="docutils literal notranslate"><span class="pre">Letter.exp</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.Letter.__eq__"><code class="docutils literal notranslate"><span class="pre">Letter.__eq__()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.Letter.__lt__"><code class="docutils literal notranslate"><span class="pre">Letter.__lt__()</span></code></a></li>
-<li><a class="reference internal" href="#free_groups_26.Letter.get_copyable"><code class="docutils literal notranslate"><span class="pre">Letter.get_copyable()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.is_inverse"><code class="docutils literal notranslate"><span class="pre">Letter.is_inverse()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.inv"><code class="docutils literal notranslate"><span class="pre">Letter.inv()</span></code></a></li>
+<li><a class="reference internal" href="#free_groups_26.Letter.get_base"><code class="docutils literal notranslate"><span class="pre">Letter.get_base()</span></code></a></li>
 </ul>
 </li>
 </ul>
