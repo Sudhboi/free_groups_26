@@ -14,15 +14,20 @@ class Word(Sequence[Letter]):
     word: tuple[Letter, ...]
     length: int
 
-    def __init__(self, word: Iterable[Letter]) -> None:
+    def __init__(self, word: Iterable[Letter], cyclically_reduce: bool = False) -> None:
         """
         This class represents a word.
 
         :param word: Any :py:type:`Iterable` containing :py:class:`Letter` s is accepted.
         """
         super().__init__()
-        self.word = tuple(word)
-        self.length = sum(abs(l.exp) for l in self.word)
+        m_word: list[Letter] = []
+        for letter in word:
+            reduce_word_helper(m_word, letter)
+        if cyclically_reduce:
+            reduce_cyclic(m_word)
+        self.word = tuple(m_word)
+        self.length = sum(abs(x.exp) for x in self.word)
 
     @override
     def __len__(self) -> int:
@@ -41,19 +46,6 @@ class Word(Sequence[Letter]):
         else:
             return Word(self.word[index])
 
-    def reduced(self, cyclic: bool = False) -> Word:
-        """
-        Reduces the word. Uses a stack to perform reduction in :math:`O(n)`.
-
-        :param cyclic: If the word is to be cyclically reduced.
-        """
-        m_word: list[Letter] = []
-        for letter in self.word:
-            reduce_word_helper(m_word, letter)
-        if cyclic:
-            reduce_cyclic(m_word)
-        return Word(m_word)
-
     def __mul__(self, other: object) -> Word:
         if isinstance(other, Word):
             return Word(self.word + other.word)
@@ -70,18 +62,6 @@ class Word(Sequence[Letter]):
         else:
             return NotImplemented
 
-    def strict_equals(self, other: Word) -> bool:
-        """
-        Checks strict (unreduced) equality.
-
-        >>> read("aa").strict_equals(read("aa"))
-        True
-        >>> read("aabB").strict_equals(read("aa"))
-        False
-
-        """
-        return self.word == other.word
-
     def inv(self) -> Word:
         return Word(
             Letter(element.sym, -1 * element.exp) for element in self.word[::-1]
@@ -89,11 +69,11 @@ class Word(Sequence[Letter]):
 
     @override
     def __eq__(self, value: object, /) -> bool:
-        return isinstance(value, Word) and self.reduced().strict_equals(value.reduced())
+        return isinstance(value, Word) and self.word == value.word
 
     @override
     def __hash__(self) -> int:
-        return hash(self.reduced().word)
+        return hash(self.word)
 
     def __pow__(self, exp: Exponent) -> Word:
         """
@@ -117,13 +97,11 @@ class Word(Sequence[Letter]):
 
     def is_cyclically_reduced(self) -> bool:
         """
-        :return: whether the word is cyclically reduced.
+        :return: whether the word is cyclically reduced. Assumes that the given word is reduced linearly.
         """
-        if self.length <= 1:
+        if len(self.word) <= 1:
             return True
-        return (
-            self.strict_equals(self.reduced()) and self.word[0].sym != self.word[-1].sym
-        )
+        return self.word[0].sym != self.word[-1].sym
 
     def infer_free_group(self) -> FreeGroup:
         """
@@ -138,6 +116,24 @@ class Word(Sequence[Letter]):
             if letter.sym not in basis:
                 basis.add(letter.sym)  # pyright: ignore[reportUnknownMemberType]
         return FreeGroup(basis)
+
+    @override
+    def __repr__(self) -> str:
+        """
+        Words are represented with unicode characters by default.
+        """
+        if self.length == 0:
+            return "ε"
+        return " ".join([repr(elem) for elem in self.word])
+
+    @override
+    def __str__(self) -> str:
+        """
+        Words are represented with unicode characters by default.
+        """
+        if self.length == 0:
+            return "ε"
+        return "".join([str(elem) for elem in self.word])
 
 
 def reduce_word_helper(stack: list[Letter], letter: Letter) -> None:
@@ -154,3 +150,13 @@ def reduce_word_helper(stack: list[Letter], letter: Letter) -> None:
 def reduce_cyclic(stack: list[Letter]) -> None:
     while len(stack) > 1 and stack[0].sym == stack[-1].sym:
         reduce_word_helper(stack, stack.pop(0))
+
+
+class ReducedWord(Word):
+    def __init__(self, word: Iterable[Letter], cyclic: bool = False) -> None:
+        m_word: list[Letter] = []
+        for letter in self.word:
+            reduce_word_helper(m_word, letter)
+        if cyclic:
+            reduce_cyclic(m_word)
+        super().__init__(m_word)

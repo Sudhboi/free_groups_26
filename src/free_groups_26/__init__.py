@@ -10,12 +10,11 @@ from .letter import (
 )
 from .word import (
     word_from_str,
+    word_from_str_a,
+    word_from_str_b,
     Word,
-    wfs,
-    wfsa,
-    word_from_str_alphabet,
     generate_random_word,
-    rd,
+    read,
 )
 from .free_group import FreeGroup, get_free_group
 from .morphism import Morphism

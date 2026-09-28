@@ -45,7 +45,7 @@ class Morphism:
                 newWord.append(letter)
             else:
                 newWord.extend((self.morphism_map[letter.sym] ** letter.exp).word)
-        return Word(newWord).reduced(reduce_cyclic)
+        return Word(newWord, reduce_cyclic)
 
     def __call__(self, word: Word, *args: Any, **kwds: Any) -> Word:
         """

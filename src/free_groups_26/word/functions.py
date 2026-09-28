@@ -69,7 +69,7 @@ def word_from_str_a(raw: str) -> Word:
 
 def word_from_str(inp: str) -> Word:
     """
-    Parses a word from a string. Guesses the correct function to use from :py:func:`word_from_str_alphabet` and :py:func:`word_from_str` based on whether there is a
+    Parses a word from a string. Guesses the correct function to use from :py:func:`word_from_str_a` and :py:func:`word_from_str_b` based on whether there is a
     caret ``^`` in the input. Recommended in most cases.
     """
     if "^" in inp:

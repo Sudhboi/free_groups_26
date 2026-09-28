@@ -8,4 +8,4 @@ def test_conversion():
 
 def test_reduction():
     w = word_from_str("a^3 b^-2 b^2 a^-2 c^0")
-    assert w.reduced() == word_from_str("a")
+    assert w == word_from_str("a")
