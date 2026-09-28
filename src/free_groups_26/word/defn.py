@@ -1,3 +1,4 @@
+from __future__ import annotations
 from collections.abc import Iterable, MutableSet, Sequence
 from symtable import Symbol
 from typing import overload, override
